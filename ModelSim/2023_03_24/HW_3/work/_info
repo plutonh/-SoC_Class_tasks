@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/20.1/Project/2023_03_24/HW_1
+vshift_reg
+Z0 !s110 1681631425
+!i10b 1
+!s100 <nCoz9T:W>AWBRg6hINkT3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IP>]Od5FSQfaF=JzBo0_nE0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/intelFPGA_lite/20.1/Project_ModelSim/2023_03_24/HW_3
+w1681631395
+8C:/intelFPGA_lite/20.1/Project_ModelSim/2023_03_24/HW_3/shift_reg.v
+FC:/intelFPGA_lite/20.1/Project_ModelSim/2023_03_24/HW_3/shift_reg.v
+!i122 37
+L0 1 44
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1681631425.000000
+!s107 C:/intelFPGA_lite/20.1/Project_ModelSim/2023_03_24/HW_3/shift_reg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project_ModelSim/2023_03_24/HW_3/shift_reg.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vtb_shift_reg
+R0
+!i10b 1
+!s100 HWzZeg2k6_GIWIV?j]aTB3
+R1
+Ik@Iak0SPjfnK52]K]:VY=1
+R2
+R3
+w1679552682
+8C:/intelFPGA_lite/20.1/Project_ModelSim/2023_03_24/HW_3/tb_shift_reg.v
+FC:/intelFPGA_lite/20.1/Project_ModelSim/2023_03_24/HW_3/tb_shift_reg.v
+!i122 38
+L0 1 26
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/intelFPGA_lite/20.1/Project_ModelSim/2023_03_24/HW_3/tb_shift_reg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project_ModelSim/2023_03_24/HW_3/tb_shift_reg.v|
+!i113 1
+R6
+R7

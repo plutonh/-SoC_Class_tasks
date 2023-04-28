@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/20.1/Project_ModelSim/2023_03_24/HW_3
+vcase_test
+!s110 1681912559
+!i10b 1
+!s100 ETHahkBIaV79Wb>Z9a6lM2
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IC3ZoR5nIo^:2AiBlifhoC3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/intelFPGA_lite/20.1/Project_ModelSim/practice/case
+w1681912554
+8C:/intelFPGA_lite/20.1/Project_ModelSim/practice/case/case_test.v
+FC:/intelFPGA_lite/20.1/Project_ModelSim/practice/case/case_test.v
+!i122 10
+L0 1 15
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z4 !s108 1681912559.000000
+!s107 C:/intelFPGA_lite/20.1/Project_ModelSim/practice/case/case_test.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project_ModelSim/practice/case/case_test.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vtb_case_test
+!s110 1681912560
+!i10b 1
+!s100 ^5PjmI6X407ge]GoBL?cE2
+R0
+IA9TTg:T4cbOLJ4;E4KI;n2
+R1
+R2
+w1681912538
+8C:/intelFPGA_lite/20.1/Project_ModelSim/practice/case/tb_case_test.v
+FC:/intelFPGA_lite/20.1/Project_ModelSim/practice/case/tb_case_test.v
+!i122 11
+L0 2 28
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/20.1/Project_ModelSim/practice/case/tb_case_test.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project_ModelSim/practice/case/tb_case_test.v|
+!i113 1
+R5
+R6

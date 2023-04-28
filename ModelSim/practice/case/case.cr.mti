@@ -1,0 +1,15 @@
+C:/intelFPGA_lite/20.1/Project_ModelSim/practice/case/case_test.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project_ModelSim/practice/case/case_test.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module case_test
+
+Top level modules:
+	case_test
+
+} {} {}} C:/intelFPGA_lite/20.1/Project_ModelSim/practice/case/tb_case_test.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project_ModelSim/practice/case/tb_case_test.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_case_test
+
+Top level modules:
+	tb_case_test
+
+} {} {}}

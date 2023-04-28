@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/20.1
+vdecoder2to4
+Z0 !s110 1679630122
+!i10b 1
+!s100 50AXBaSaGj2K9NNH_diWT2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IkR9HHDIAS]^dMYFk=o33>1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/intelFPGA_lite/20.1/Project/2023_03_24/HW_1
+w1679552775
+8C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_1/decoder2to4.v
+FC:/intelFPGA_lite/20.1/Project/2023_03_24/HW_1/decoder2to4.v
+!i122 6
+L0 1 13
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1679630122.000000
+!s107 C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_1/decoder2to4.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_1/decoder2to4.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vtb_decoder2to4
+R0
+!i10b 1
+!s100 bl8MIfoSN^l==cY`zLA[?1
+R1
+IEO;m`o;Zf2JI2_9gb:;k`1
+R2
+R3
+w1679551122
+8C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_1/tb_decoder2to4.v
+FC:/intelFPGA_lite/20.1/Project/2023_03_24/HW_1/tb_decoder2to4.v
+!i122 7
+L0 1 16
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_1/tb_decoder2to4.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_1/tb_decoder2to4.v|
+!i113 1
+R6
+R7

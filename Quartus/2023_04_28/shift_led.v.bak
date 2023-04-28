@@ -1,0 +1,33 @@
+module shift_led(clk, reset_n, board_led);
+
+	parameter SEC_CNT = 50000000;
+
+	input            clk, reset_n;
+	output reg [9:0] board_led;
+	
+	reg [9:0] count;
+	reg [3:0] direct;
+	
+	always @(posedge clk or negedge reset_n) begin
+			if(!reset_n) begin
+				board_led <= 1;
+				count <= 0;
+				direct <= 0;
+			end
+			else begin
+				count <= count + 1;
+				if(count == SEC_CNT) begin
+					if(direct == 1) begin
+						board_led <= {board_led[8:0], 1'b0};
+						count <= 0;
+						direct <= direct + 1;
+					end
+					else begin
+						board_led <= {1'b0, board_led[9:1]};
+						count <= 0;
+						direct <= direct - 1;
+				   end
+				end
+			end
+	end
+endmodule

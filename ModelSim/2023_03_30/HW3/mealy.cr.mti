@@ -1,0 +1,15 @@
+C:/intelFPGA_lite/20.1/Project_ModelSim/2023_03_30/HW3/mealy_fsm.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project_ModelSim/2023_03_30/HW3/mealy_fsm.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mealy_fsm
+
+Top level modules:
+	mealy_fsm
+
+} {} {}} C:/intelFPGA_lite/20.1/Project_ModelSim/2023_03_30/HW3/mealy_fsm_tb.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project_ModelSim/2023_03_30/HW3/mealy_fsm_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mealy_fsm_tb
+
+Top level modules:
+	mealy_fsm_tb
+
+} {} {}}

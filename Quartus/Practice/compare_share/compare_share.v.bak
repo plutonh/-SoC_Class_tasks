@@ -1,0 +1,9 @@
+module compare_share(v, w, x, z, k);
+	input [2:0] k, v, w;
+	input x;
+	output [3:0 z;
+	wire [3:0] z;
+	
+	assign y = x ? k+w : k+v;
+	assign z = x ? y+w : y+v;
+endmodule

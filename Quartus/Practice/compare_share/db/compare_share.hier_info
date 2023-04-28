@@ -1,0 +1,9 @@
+|compare_share
+a => Add0.IN1
+b => Add1.IN1
+t => Add0.IN2
+t => Add1.IN2
+sel => z.OUTPUTSELECT
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+

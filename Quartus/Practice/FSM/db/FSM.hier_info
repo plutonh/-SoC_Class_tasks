@@ -1,0 +1,10 @@
+|FSM
+o <= o$latch.DB_MAX_OUTPUT_PORT_TYPE
+a => o.IN0
+a => Selector3.IN2
+a => Selector4.IN2
+b => o.IN1
+clk => state~1.DATAIN
+reset => state~3.DATAIN
+
+

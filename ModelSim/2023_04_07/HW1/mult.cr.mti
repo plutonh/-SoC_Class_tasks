@@ -1,0 +1,29 @@
+C:/intelFPGA_lite/20.1/Project/2023_04_07/HW1/half_adder.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/2023_04_07/HW1/half_adder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module half_adder
+
+Top level modules:
+	half_adder
+
+} {} {}} C:/intelFPGA_lite/20.1/Project/2023_04_07/HW1/full_adder.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/2023_04_07/HW1/full_adder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module full_adder
+
+Top level modules:
+	full_adder
+
+} {} {}} C:/intelFPGA_lite/20.1/Project/2023_04_07/HW1/and_operation.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/2023_04_07/HW1/and_operation.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module and_operation
+
+Top level modules:
+	and_operation
+
+} {} {}} C:/intelFPGA_lite/20.1/Project/2023_04_07/HW1/fulladder_4bit.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/2023_04_07/HW1/fulladder_4bit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fulladder_4bit
+
+Top level modules:
+	fulladder_4bit
+
+} {} {}}

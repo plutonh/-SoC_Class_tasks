@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/20.1/Project/2023_03_24/HW_1
+vcomp_2in
+Z0 !s110 1679628964
+!i10b 1
+!s100 cG7PU3RfThNR>Qg3ARSBU3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IQ]Tg[?FMS2KZ=K4ZS:JLO3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/intelFPGA_lite/20.1/Project/2023_03_24/HW_2
+w1679552367
+8C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_2/comp_2in.v
+FC:/intelFPGA_lite/20.1/Project/2023_03_24/HW_2/comp_2in.v
+!i122 2
+L0 1 8
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1679628964.000000
+!s107 C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_2/comp_2in.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_2/comp_2in.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vtb_comp_2in
+R0
+!i10b 1
+!s100 o57SE2WAfHBk8dQLA>Oz^1
+R1
+Ia<af5T:`:hf4jkIcR3Fin1
+R2
+R3
+w1679552132
+8C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_2/tb_comp_2in.v
+FC:/intelFPGA_lite/20.1/Project/2023_03_24/HW_2/tb_comp_2in.v
+!i122 3
+L0 1 22
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_2/tb_comp_2in.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_2/tb_comp_2in.v|
+!i113 1
+R6
+R7

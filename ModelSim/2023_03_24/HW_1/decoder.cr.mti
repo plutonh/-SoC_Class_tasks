@@ -1,0 +1,15 @@
+C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_1/decoder2to4.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_1/decoder2to4.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module decoder2to4
+
+Top level modules:
+	decoder2to4
+
+} {} {}} C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_1/tb_decoder2to4.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_1/tb_decoder2to4.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_decoder2to4
+
+Top level modules:
+	tb_decoder2to4
+
+} {} {}}

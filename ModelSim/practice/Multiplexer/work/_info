@@ -1,0 +1,172 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/20.1/Project/Multiplexer
+vfull_adder
+!s110 1678428681
+!i10b 1
+!s100 FU=@aDZDf[94HYdETA3I]2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ILU:]d^SlB0llZ0]ZB_`JG1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1678428503
+8C:/intelFPGA_lite/20.1/Project/2023_03_10/full_adder.v
+FC:/intelFPGA_lite/20.1/Project/2023_03_10/full_adder.v
+!i122 29
+L0 1 10
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1678428681.000000
+!s107 C:/intelFPGA_lite/20.1/Project/2023_03_10/full_adder.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/20.1/Project/2023_03_10/full_adder.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+vhalf_adder
+!s110 1678428687
+!i10b 1
+!s100 m0cQ1b=FS8;CK_UfE0F1z3
+R1
+IM33fLJ4]4m6bjobaGzmXE1
+R2
+R0
+w1678424490
+8C:/intelFPGA_lite/20.1/Project/2023_03_10/half_adder.v
+FC:/intelFPGA_lite/20.1/Project/2023_03_10/half_adder.v
+!i122 31
+L0 1 6
+R3
+r1
+!s85 0
+31
+!s108 1678428687.000000
+!s107 C:/intelFPGA_lite/20.1/Project/2023_03_10/half_adder.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/20.1/Project/2023_03_10/half_adder.v|
+!i113 1
+R4
+R5
+vmultiplexer
+!s110 1678422195
+!i10b 1
+!s100 MdHl1zVa50R85F:0WY5Lf2
+R1
+IEJEBU1LHIX^mT=a[oUV5G0
+R2
+R0
+w1678422161
+8C:/intelFPGA_lite/20.1/Project/Multiplexer/multiplexer.v
+FC:/intelFPGA_lite/20.1/Project/Multiplexer/multiplexer.v
+!i122 0
+Z6 L0 1 8
+R3
+r1
+!s85 0
+31
+!s108 1678422195.000000
+!s107 C:/intelFPGA_lite/20.1/Project/Multiplexer/multiplexer.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/20.1/Project/Multiplexer/multiplexer.v|
+!i113 1
+R4
+R5
+vmux2to1
+!s110 1678426298
+!i10b 1
+!s100 aPJaV^zbg>HAj_5nP9m331
+R1
+IB;<3dTZWmQZlOd[3QhiTD3
+R2
+R0
+w1678426288
+8C:/intelFPGA_lite/20.1/Project/2023_03_10/mux2to1.v
+FC:/intelFPGA_lite/20.1/Project/2023_03_10/mux2to1.v
+!i122 9
+L0 1 11
+R3
+r1
+!s85 0
+31
+!s108 1678426298.000000
+!s107 C:/intelFPGA_lite/20.1/Project/2023_03_10/mux2to1.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/20.1/Project/2023_03_10/mux2to1.v|
+!i113 1
+R4
+R5
+vmux2to1_4bit
+!s110 1678426300
+!i10b 1
+!s100 kY`0Y<iP`jN9`D1F2D;lE2
+R1
+I7J?h_Y9Ukn]l3j9nancnX0
+R2
+R0
+w1678426285
+8C:/intelFPGA_lite/20.1/Project/2023_03_10/mux2to1_4bit.v
+FC:/intelFPGA_lite/20.1/Project/2023_03_10/mux2to1_4bit.v
+!i122 10
+R6
+R3
+r1
+!s85 0
+31
+!s108 1678426300.000000
+!s107 C:/intelFPGA_lite/20.1/Project/2023_03_10/mux2to1_4bit.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/20.1/Project/2023_03_10/mux2to1_4bit.v|
+!i113 1
+R4
+R5
+vtb_full_adder
+!s110 1678428970
+!i10b 1
+!s100 GIPA=?CScbPB4_X8Q7fBn2
+R1
+IGml?A9emKOZd:2K5BdEnl1
+R2
+R0
+w1678428968
+8C:/intelFPGA_lite/20.1/Project/2023_03_10/tb_full_adder.v
+FC:/intelFPGA_lite/20.1/Project/2023_03_10/tb_full_adder.v
+!i122 32
+L0 2 25
+R3
+r1
+!s85 0
+31
+!s108 1678428970.000000
+!s107 C:/intelFPGA_lite/20.1/Project/2023_03_10/tb_full_adder.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/20.1/Project/2023_03_10/tb_full_adder.v|
+!i113 1
+R4
+R5
+vtb_mux2to1_4bit
+!s110 1678428449
+!i10b 1
+!s100 W0Qah5d]>]c9WVjiYGiI_3
+R1
+Imbz<_m07d[2V;@Pn``9]>2
+R2
+R0
+w1678428446
+8C:/intelFPGA_lite/20.1/Project/2023_03_10/tb_mux2to1_4bit.v
+FC:/intelFPGA_lite/20.1/Project/2023_03_10/tb_mux2to1_4bit.v
+!i122 26
+L0 2 16
+R3
+r1
+!s85 0
+31
+!s108 1678428449.000000
+!s107 C:/intelFPGA_lite/20.1/Project/2023_03_10/tb_mux2to1_4bit.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/20.1/Project/2023_03_10/tb_mux2to1_4bit.v|
+!i113 1
+R4
+R5

@@ -1,0 +1,11 @@
+module led_10bit_controller_condition(clk, sw, leds);
+
+	input            clk;
+	input 	  [9:0] sw;
+	output reg [9:0] leds;
+	
+	always @(posedge clk) begin
+		
+	end
+
+endmodule

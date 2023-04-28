@@ -1,0 +1,15 @@
+C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_2/tb_comp_2in.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_2/tb_comp_2in.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_comp_2in
+
+Top level modules:
+	tb_comp_2in
+
+} {} {}} C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_2/comp_2in.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/2023_03_24/HW_2/comp_2in.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module comp_2in
+
+Top level modules:
+	comp_2in
+
+} {} {}}

@@ -1,0 +1,8 @@
+C:/intelFPGA_lite/20.1/Project/practice/tb_practice.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/practice/tb_practice.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_practice
+
+Top level modules:
+	tb_practice
+
+} {} {}}

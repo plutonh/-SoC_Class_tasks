@@ -1,0 +1,24 @@
+|pipeline
+out <= pipestage:s3.port0
+in => in.IN1
+clock => clock.IN3
+
+
+|pipeline|pipestage:s1
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~reg0.DATAIN
+clock => out~reg0.CLK
+
+
+|pipeline|pipestage:s2
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~reg0.DATAIN
+clock => out~reg0.CLK
+
+
+|pipeline|pipestage:s3
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~reg0.DATAIN
+clock => out~reg0.CLK
+
+

@@ -1,0 +1,29 @@
+C:/intelFPGA_lite/20.1/Project/practice/dot_product/dot_product_not_pipelined.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/practice/dot_product/dot_product_not_pipelined.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module dot_product_not_pipelined
+
+Top level modules:
+	dot_product_not_pipelined
+
+} {} {}} C:/intelFPGA_lite/20.1/Project/practice/dot_product/dot_product_pipelined.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/practice/dot_product/dot_product_pipelined.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module dot_product_pipelined
+
+Top level modules:
+	dot_product_pipelined
+
+} {} {}} C:/intelFPGA_lite/20.1/Project/practice/dot_product/tb_dot_product_pipelined.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/practice/dot_product/tb_dot_product_pipelined.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_dot_product_pipelined
+
+Top level modules:
+	tb_dot_product_pipelined
+
+} {} {}} C:/intelFPGA_lite/20.1/Project/practice/dot_product/dot_procuct_pipelined.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/practice/dot_product/dot_procuct_pipelined.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module dot_product_not_pipelined
+
+Top level modules:
+	dot_product_not_pipelined
+
+} {} {}}

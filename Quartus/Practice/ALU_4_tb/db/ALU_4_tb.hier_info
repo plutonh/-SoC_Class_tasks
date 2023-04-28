@@ -1,0 +1,233 @@
+|ALU_4_tb
+
+
+|ALU_4_tb|ALU_4:u_ALU_4
+i_a[0] => i_a[0].IN2
+i_a[1] => i_a[1].IN2
+i_a[2] => i_a[2].IN2
+i_a[3] => i_a[3].IN2
+i_b[0] => i_b[0].IN2
+i_b[1] => i_b[1].IN2
+i_b[2] => i_b[2].IN2
+i_b[3] => i_b[3].IN2
+i_sel[0] => sel[0].IN2
+i_sel[1] => sel[1].IN2
+i_sel[2] => o_G.OUTPUTSELECT
+i_sel[2] => o_G.OUTPUTSELECT
+i_sel[2] => o_G.OUTPUTSELECT
+i_sel[2] => o_G.OUTPUTSELECT
+i_sel[2] => o_Cout.OUTPUTSELECT
+i_Cin => i_Cin.IN1
+o_Cout <= o_Cout.DB_MAX_OUTPUT_PORT_TYPE
+o_G[0] <= o_G.DB_MAX_OUTPUT_PORT_TYPE
+o_G[1] <= o_G.DB_MAX_OUTPUT_PORT_TYPE
+o_G[2] <= o_G.DB_MAX_OUTPUT_PORT_TYPE
+o_G[3] <= o_G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|AU_4:A1
+i_a[0] => i_a[0].IN1
+i_a[1] => i_a[1].IN1
+i_a[2] => i_a[2].IN1
+i_a[3] => i_a[3].IN1
+i_b[0] => i_b[0].IN1
+i_b[1] => i_b[1].IN1
+i_b[2] => i_b[2].IN1
+i_b[3] => i_b[3].IN1
+i_Cin => i_Cin.IN1
+sel_0 => sel_0.IN4
+sel_1 => sel_1.IN4
+AU_out[0] <= full_adder:F1.port3
+AU_out[1] <= full_adder:F2.port3
+AU_out[2] <= full_adder:F3.port3
+AU_out[3] <= full_adder:F4.port3
+o_Cout <= full_adder:F4.port4
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|AU_4:A1|MUX_4x1:M1
+b => out.DATAB
+b => out.DATAA
+s0 => out.OUTPUTSELECT
+s0 => out.OUTPUTSELECT
+s1 => out.OUTPUTSELECT
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|AU_4:A1|MUX_4x1:M2
+b => out.DATAB
+b => out.DATAA
+s0 => out.OUTPUTSELECT
+s0 => out.OUTPUTSELECT
+s1 => out.OUTPUTSELECT
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|AU_4:A1|MUX_4x1:M3
+b => out.DATAB
+b => out.DATAA
+s0 => out.OUTPUTSELECT
+s0 => out.OUTPUTSELECT
+s1 => out.OUTPUTSELECT
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|AU_4:A1|MUX_4x1:M4
+b => out.DATAB
+b => out.DATAA
+s0 => out.OUTPUTSELECT
+s0 => out.OUTPUTSELECT
+s1 => out.OUTPUTSELECT
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|AU_4:A1|full_adder:F1
+i_x => i_x.IN1
+i_y => i_y.IN1
+i_cin => i_cin.IN1
+o_s <= half_adder:h2.o_s
+o_cout <= o_cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|AU_4:A1|full_adder:F1|half_adder:h1
+i_x => comb.IN0
+i_x => comb.IN0
+i_y => comb.IN1
+i_y => comb.IN1
+o_s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+o_c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|AU_4:A1|full_adder:F1|half_adder:h2
+i_x => comb.IN0
+i_x => comb.IN0
+i_y => comb.IN1
+i_y => comb.IN1
+o_s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+o_c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|AU_4:A1|full_adder:F2
+i_x => i_x.IN1
+i_y => i_y.IN1
+i_cin => i_cin.IN1
+o_s <= half_adder:h2.o_s
+o_cout <= o_cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|AU_4:A1|full_adder:F2|half_adder:h1
+i_x => comb.IN0
+i_x => comb.IN0
+i_y => comb.IN1
+i_y => comb.IN1
+o_s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+o_c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|AU_4:A1|full_adder:F2|half_adder:h2
+i_x => comb.IN0
+i_x => comb.IN0
+i_y => comb.IN1
+i_y => comb.IN1
+o_s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+o_c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|AU_4:A1|full_adder:F3
+i_x => i_x.IN1
+i_y => i_y.IN1
+i_cin => i_cin.IN1
+o_s <= half_adder:h2.o_s
+o_cout <= o_cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|AU_4:A1|full_adder:F3|half_adder:h1
+i_x => comb.IN0
+i_x => comb.IN0
+i_y => comb.IN1
+i_y => comb.IN1
+o_s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+o_c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|AU_4:A1|full_adder:F3|half_adder:h2
+i_x => comb.IN0
+i_x => comb.IN0
+i_y => comb.IN1
+i_y => comb.IN1
+o_s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+o_c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|AU_4:A1|full_adder:F4
+i_x => i_x.IN1
+i_y => i_y.IN1
+i_cin => i_cin.IN1
+o_s <= half_adder:h2.o_s
+o_cout <= o_cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|AU_4:A1|full_adder:F4|half_adder:h1
+i_x => comb.IN0
+i_x => comb.IN0
+i_y => comb.IN1
+i_y => comb.IN1
+o_s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+o_c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|AU_4:A1|full_adder:F4|half_adder:h2
+i_x => comb.IN0
+i_x => comb.IN0
+i_y => comb.IN1
+i_y => comb.IN1
+o_s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+o_c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_4_tb|ALU_4:u_ALU_4|LU_4:L1
+i_a[0] => LU_out.IN0
+i_a[0] => LU_out.IN0
+i_a[0] => LU_out.IN0
+i_a[0] => LU_out.DATAB
+i_a[1] => LU_out.IN0
+i_a[1] => LU_out.IN0
+i_a[1] => LU_out.IN0
+i_a[1] => LU_out.DATAB
+i_a[2] => LU_out.IN0
+i_a[2] => LU_out.IN0
+i_a[2] => LU_out.IN0
+i_a[2] => LU_out.DATAB
+i_a[3] => LU_out.IN0
+i_a[3] => LU_out.IN0
+i_a[3] => LU_out.IN0
+i_a[3] => LU_out.DATAB
+i_b[0] => LU_out.IN1
+i_b[0] => LU_out.IN1
+i_b[0] => LU_out.IN1
+i_b[1] => LU_out.IN1
+i_b[1] => LU_out.IN1
+i_b[1] => LU_out.IN1
+i_b[2] => LU_out.IN1
+i_b[2] => LU_out.IN1
+i_b[2] => LU_out.IN1
+i_b[3] => LU_out.IN1
+i_b[3] => LU_out.IN1
+i_b[3] => LU_out.IN1
+sel_0 => LU_out.OUTPUTSELECT
+sel_0 => LU_out.OUTPUTSELECT
+sel_0 => LU_out.OUTPUTSELECT
+sel_0 => LU_out.OUTPUTSELECT
+sel_0 => LU_out.OUTPUTSELECT
+sel_0 => LU_out.OUTPUTSELECT
+sel_0 => LU_out.OUTPUTSELECT
+sel_0 => LU_out.OUTPUTSELECT
+sel_1 => LU_out.OUTPUTSELECT
+sel_1 => LU_out.OUTPUTSELECT
+sel_1 => LU_out.OUTPUTSELECT
+sel_1 => LU_out.OUTPUTSELECT
+LU_out[0] <= LU_out.DB_MAX_OUTPUT_PORT_TYPE
+LU_out[1] <= LU_out.DB_MAX_OUTPUT_PORT_TYPE
+LU_out[2] <= LU_out.DB_MAX_OUTPUT_PORT_TYPE
+LU_out[3] <= LU_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
