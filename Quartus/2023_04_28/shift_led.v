@@ -6,8 +6,8 @@ module shift_led(clk, reset_n, board_led);
 	output reg [9:0] board_led;
 	
 	reg [25:0] count;
-	reg [3:0] direct_count;
-	reg       direct;
+	reg [3:0]  direct_count;
+	reg        direct;
 	
 	always @(posedge clk or negedge reset_n) begin
 		if(!reset_n) begin

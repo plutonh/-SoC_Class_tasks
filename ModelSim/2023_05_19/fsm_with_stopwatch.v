@@ -1,0 +1,108 @@
+module fsm_with_stopwatch(
+input clk,
+input reset_n,
+input i_run,
+output o_idle,
+output o_running,
+output reg o_done,
+output reg [6:0] o_seven0,
+output reg [6:0] o_seven1,
+output reg [6:0] o_seven2,
+output reg [6:0] o_seven3
+);
+    parameter SEC_CNT = 10;
+    parameter IDLE = 2'b00, RUN = 2'b01, DONE = 2'b10;
+
+    wire      is_done;
+    reg [1:0] state, next, LED;
+    reg [2:0] count;
+    reg [3:0] clk_count;
+
+    always @(posedge clk or negedge reset_n) begin
+    // count & i_run reset
+        if(!reset_n) begin
+            count     <= 0;
+            clk_count <= 0;
+        end
+        else if(i_run) begin
+            count     <= 0;
+            clk_count <= 0;
+        end
+        else begin
+            if(clk_count == SEC_CNT) begin
+                count     <= count + 1;
+                clk_count <= 0;
+                if(count == 5) count <= 0;
+            end
+            else clk_count <= clk_count + 1;
+        end
+    end
+
+    always @(posedge clk or negedge reset_n) begin
+    // state register block
+        if(!reset_n) state <= IDLE;
+        else         state <= next;
+    end
+
+    always @(*) begin 
+    // next state logic block
+        next = 2'bx;
+        case(state)
+            IDLE: if(i_run)                next = RUN;
+                  else                     next = IDLE;
+            RUN:  if(is_done)              next = DONE;
+                  else                     next = RUN;
+            DONE: if(clk_count < SEC_CNT)  next = DONE;
+                  else                     next = IDLE;
+        endcase
+    end
+
+    always @(posedge clk or negedge reset_n) begin 
+    // output logic block - LED
+        if(!reset_n) begin
+            LED    <= 2'b00;
+        end
+        else begin
+            case(next)
+                IDLE: begin LED    <= 2'b01;
+                            o_done <= 0;     end
+                RUN:  begin LED    <= 2'b10;
+                            o_done <= 0;     end
+                DONE: begin LED    <= 2'b00;
+                            o_done <= 1;     end
+            endcase
+        end
+    end
+
+    always @(posedge clk or negedge reset_n) begin 
+    // output logic block - Segment
+        if(!reset_n) begin
+            o_seven0 <= 7'b111_1111;
+            o_seven1 <= 7'b111_1111;
+            o_seven2 <= 7'b111_1111;
+            o_seven3 <= 7'b111_1111;
+        end
+        else begin
+            case(next)
+                IDLE: begin o_seven0 <= 7'b000_0100;
+                            o_seven1 <= 7'b111_1001;
+                            o_seven2 <= 7'b010_0001;
+                            o_seven3 <= 7'b111_1001; end
+                RUN:  begin o_seven0 <= 7'b011_1111;
+                            o_seven1 <= 7'b010_1011;
+                            o_seven2 <= 7'b110_0011;
+                            o_seven3 <= 7'b010_1111; end 
+                DONE: begin o_seven0 <= 7'b000_0100;
+                            o_seven1 <= 7'b010_1011;
+                            o_seven2 <= 7'b010_0011;
+                            o_seven3 <= 7'b010_0001; end
+            endcase
+        end
+    end
+
+    assign o_idle     = LED[0];
+    assign o_running  = LED[1];
+
+    assign is_done    = (state == RUN) && (count == 5) ? 1 : 0;
+
+endmodule
