@@ -1,0 +1,1200 @@
+Analysis & Synthesis report for de1soc_base
+Fri Jun 02 20:03:56 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |de1soc_base|M10K_read_buffer:r1|state
+ 10. State Machine - |de1soc_base|M10K_write:w0|state
+ 11. State Machine - |de1soc_base|M10K_read_buffer:r0|state
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Registers Packed Into Inferred Megafunctions
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for M10K_16_256:MEM|altsyncram:mem_row_rtl_0|altsyncram_dvt1:auto_generated
+ 17. Parameter Settings for User Entity Instance: Top-level Entity: |de1soc_base
+ 18. Parameter Settings for User Entity Instance: M10K_read_buffer:r0
+ 19. Parameter Settings for User Entity Instance: M10K_write:w0
+ 20. Parameter Settings for User Entity Instance: M10K_read_buffer:r1
+ 21. Parameter Settings for User Entity Instance: M10K_16_256:MEM
+ 22. Parameter Settings for Inferred Entity Instance: M10K_16_256:MEM|altsyncram:mem_row_rtl_0
+ 23. altsyncram Parameter Settings by Entity Instance
+ 24. Port Connectivity Checks: "M10K_read_buffer:r1"
+ 25. Port Connectivity Checks: "M10K_write:w0"
+ 26. Port Connectivity Checks: "M10K_read_buffer:r0"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+ 30. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Jun 02 20:03:56 2023       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; de1soc_base                                 ;
+; Top-level Entity Name           ; de1soc_base                                 ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 4144                                        ;
+; Total pins                      ; 168                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 4,096                                       ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; de1soc_base        ; de1soc_base        ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                    ;
++--------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                 ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                       ; Library ;
++--------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------+---------+
+; verilog/M10K_write.v                             ; yes             ; User Verilog HDL File                                 ; C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_write.v                             ;         ;
+; verilog/M10K_read_buffer.v                       ; yes             ; User Verilog HDL File                                 ; C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v                       ;         ;
+; verilog/M10K_16_256.v                            ; yes             ; User Verilog HDL File                                 ; C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_16_256.v                            ;         ;
+; verilog/de1soc_base.v                            ; yes             ; User Verilog HDL File                                 ; C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v                            ;         ;
+; altsyncram.tdf                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                              ;         ;
+; stratix_ram_block.inc                            ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                       ;         ;
+; lpm_mux.inc                                      ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                 ;         ;
+; lpm_decode.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                              ;         ;
+; aglobal201.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                              ;         ;
+; a_rdenreg.inc                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                               ;         ;
+; altrom.inc                                       ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                  ;         ;
+; altram.inc                                       ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                  ;         ;
+; altdpram.inc                                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                ;         ;
+; db/altsyncram_dvt1.tdf                           ; yes             ; Auto-Generated Megafunction                           ; C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/db/altsyncram_dvt1.tdf                           ;         ;
+; db/de1soc_base.ram0_m10k_16_256_125f1826.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/db/de1soc_base.ram0_m10k_16_256_125f1826.hdl.mif ;         ;
++--------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 2491           ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 903            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 710            ;
+;     -- 5 input functions                    ; 110            ;
+;     -- 4 input functions                    ; 66             ;
+;     -- <=3 input functions                  ; 17             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 4144           ;
+;                                             ;                ;
+; I/O pins                                    ; 168            ;
+; Total MLAB memory bits                      ; 0              ;
+; Total block memory bits                     ; 4096           ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 4400           ;
+; Total fan-out                               ; 28736          ;
+; Average fan-out                             ; 5.07           ;
++---------------------------------------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                  ; Entity Name      ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+------------------+--------------+
+; |de1soc_base                              ; 903 (863)           ; 4144 (2)                  ; 4096              ; 0          ; 168  ; 0            ; |de1soc_base                                                                         ; de1soc_base      ; work         ;
+;    |M10K_16_256:MEM|                      ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |de1soc_base|M10K_16_256:MEM                                                         ; M10K_16_256      ; work         ;
+;       |altsyncram:mem_row_rtl_0|          ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |de1soc_base|M10K_16_256:MEM|altsyncram:mem_row_rtl_0                                ; altsyncram       ; work         ;
+;          |altsyncram_dvt1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |de1soc_base|M10K_16_256:MEM|altsyncram:mem_row_rtl_0|altsyncram_dvt1:auto_generated ; altsyncram_dvt1  ; work         ;
+;    |M10K_read_buffer:r0|                  ; 15 (15)             ; 2062 (2062)               ; 0                 ; 0          ; 0    ; 0            ; |de1soc_base|M10K_read_buffer:r0                                                     ; M10K_read_buffer ; work         ;
+;    |M10K_read_buffer:r1|                  ; 16 (16)             ; 2063 (2063)               ; 0                 ; 0          ; 0    ; 0            ; |de1soc_base|M10K_read_buffer:r1                                                     ; M10K_read_buffer ; work         ;
+;    |M10K_write:w0|                        ; 9 (9)               ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |de1soc_base|M10K_write:w0                                                           ; M10K_write       ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                         ;
++------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+------+--------------------------------------------------+
+; Name                                                                               ; Type       ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                              ;
++------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+------+--------------------------------------------------+
+; M10K_16_256:MEM|altsyncram:mem_row_rtl_0|altsyncram_dvt1:auto_generated|ALTSYNCRAM ; M10K block ; Simple Dual Port ; 16           ; 256          ; 16           ; 256          ; 4096 ; db/de1soc_base.ram0_M10K_16_256_125f1826.hdl.mif ;
++------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+------+--------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |de1soc_base|M10K_read_buffer:r1|state                                                                                                             ;
++-------------+-------------+------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------+
+; Name        ; state.READ0 ; state.DONE ; state.WAIT ; state.READ7 ; state.READ6 ; state.READ5 ; state.READ4 ; state.READ3 ; state.READ2 ; state.READ1 ; state.IDLE ;
++-------------+-------------+------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------+
+; state.IDLE  ; 0           ; 0          ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ;
+; state.READ1 ; 0           ; 0          ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 1          ;
+; state.READ2 ; 0           ; 0          ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 1          ;
+; state.READ3 ; 0           ; 0          ; 0          ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 1          ;
+; state.READ4 ; 0           ; 0          ; 0          ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 1          ;
+; state.READ5 ; 0           ; 0          ; 0          ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 1          ;
+; state.READ6 ; 0           ; 0          ; 0          ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1          ;
+; state.READ7 ; 0           ; 0          ; 0          ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1          ;
+; state.WAIT  ; 0           ; 0          ; 1          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1          ;
+; state.DONE  ; 0           ; 1          ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1          ;
+; state.READ0 ; 1           ; 0          ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1          ;
++-------------+-------------+------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |de1soc_base|M10K_write:w0|state                                                                                                               ;
++--------------+--------------+------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+------------+
+; Name         ; state.WRITE0 ; state.DONE ; state.WRITE7 ; state.WRITE6 ; state.WRITE5 ; state.WRITE4 ; state.WRITE3 ; state.WRITE2 ; state.WRITE1 ; state.IDLE ;
++--------------+--------------+------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+------------+
+; state.IDLE   ; 0            ; 0          ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ;
+; state.WRITE1 ; 0            ; 0          ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 1          ;
+; state.WRITE2 ; 0            ; 0          ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 1          ;
+; state.WRITE3 ; 0            ; 0          ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 1          ;
+; state.WRITE4 ; 0            ; 0          ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 1          ;
+; state.WRITE5 ; 0            ; 0          ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.WRITE6 ; 0            ; 0          ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.WRITE7 ; 0            ; 0          ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.DONE   ; 0            ; 1          ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.WRITE0 ; 1            ; 0          ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
++--------------+--------------+------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |de1soc_base|M10K_read_buffer:r0|state                                                                                                             ;
++-------------+-------------+------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------+
+; Name        ; state.READ0 ; state.DONE ; state.WAIT ; state.READ7 ; state.READ6 ; state.READ5 ; state.READ4 ; state.READ3 ; state.READ2 ; state.READ1 ; state.IDLE ;
++-------------+-------------+------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------+
+; state.IDLE  ; 0           ; 0          ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ;
+; state.READ1 ; 0           ; 0          ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 1          ;
+; state.READ2 ; 0           ; 0          ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 1          ;
+; state.READ3 ; 0           ; 0          ; 0          ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 1          ;
+; state.READ4 ; 0           ; 0          ; 0          ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 1          ;
+; state.READ5 ; 0           ; 0          ; 0          ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 1          ;
+; state.READ6 ; 0           ; 0          ; 0          ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1          ;
+; state.READ7 ; 0           ; 0          ; 0          ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1          ;
+; state.WAIT  ; 0           ; 0          ; 1          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1          ;
+; state.DONE  ; 0           ; 1          ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1          ;
+; state.READ0 ; 1           ; 0          ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1          ;
++-------------+-------------+------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                             ;
++------------------------------------------------------------------------------------------------------------------+---------------------------------------------+
+; Register name                                                                                                    ; Reason for Removal                          ;
++------------------------------------------------------------------------------------------------------------------+---------------------------------------------+
+; M10K_write:w0|o_write_data[1,2,6..31,33,34,38..64,66,70..95,98,102..129,134..159,161,166..192,198..223,230..255] ; Stuck at GND due to stuck port data_in      ;
+; M10K_read_buffer:r0|o_read_addr[3]                                                                               ; Stuck at GND due to stuck port data_in      ;
+; M10K_write:w0|o_write_data[0]                                                                                    ; Stuck at GND due to stuck port data_in      ;
+; M10K_write:w0|o_write_addr[3]                                                                                    ; Merged with M10K_write:w0|o_write_start     ;
+; M10K_write:w0|o_write_data[32,65,96,97,130,160,162,193,194,224..226]                                             ; Merged with M10K_write:w0|o_write_start     ;
+; M10K_write:w0|o_write_data[3,35,67,99,163,195,227]                                                               ; Merged with M10K_write:w0|o_write_data[131] ;
+; M10K_write:w0|o_write_data[4,36,68,132,164,196,228]                                                              ; Merged with M10K_write:w0|o_write_data[100] ;
+; M10K_write:w0|o_write_data[5,37,69,133,165,197,229]                                                              ; Merged with M10K_write:w0|o_write_data[101] ;
+; M10K_read_buffer:r1|state~4                                                                                      ; Lost fanout                                 ;
+; M10K_read_buffer:r1|state~5                                                                                      ; Lost fanout                                 ;
+; M10K_read_buffer:r1|state~6                                                                                      ; Lost fanout                                 ;
+; M10K_read_buffer:r1|state~7                                                                                      ; Lost fanout                                 ;
+; M10K_write:w0|state~4                                                                                            ; Lost fanout                                 ;
+; M10K_write:w0|state~5                                                                                            ; Lost fanout                                 ;
+; M10K_write:w0|state~6                                                                                            ; Lost fanout                                 ;
+; M10K_write:w0|state~7                                                                                            ; Lost fanout                                 ;
+; M10K_read_buffer:r0|state~4                                                                                      ; Lost fanout                                 ;
+; M10K_read_buffer:r0|state~5                                                                                      ; Lost fanout                                 ;
+; M10K_read_buffer:r0|state~6                                                                                      ; Lost fanout                                 ;
+; M10K_read_buffer:r0|state~7                                                                                      ; Lost fanout                                 ;
+; Total Number of Removed Registers = 267                                                                          ;                                             ;
++------------------------------------------------------------------------------------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 4144  ;
+; Number of registers using Synchronous Clear  ; 4096  ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 4144  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 4096  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                               ;
++-------------------------------------+-------------------------------+------+
+; Register Name                       ; Megafunction                  ; Type ;
++-------------------------------------+-------------------------------+------+
+; M10K_16_256:MEM|o_read_data[0..255] ; M10K_16_256:MEM|mem_row_rtl_0 ; RAM  ;
++-------------------------------------+-------------------------------+------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 4:1                ; 256 bits  ; 512 LEs       ; 0 LEs                ; 512 LEs                ; Yes        ; |de1soc_base|M10K_read_buffer:r0|store_vec[1][7]   ;
+; 4:1                ; 256 bits  ; 512 LEs       ; 0 LEs                ; 512 LEs                ; Yes        ; |de1soc_base|M10K_read_buffer:r0|store_vec[2][7]   ;
+; 4:1                ; 256 bits  ; 512 LEs       ; 0 LEs                ; 512 LEs                ; Yes        ; |de1soc_base|M10K_read_buffer:r0|store_vec[3][15]  ;
+; 4:1                ; 256 bits  ; 512 LEs       ; 0 LEs                ; 512 LEs                ; Yes        ; |de1soc_base|M10K_read_buffer:r0|store_vec[4][8]   ;
+; 4:1                ; 256 bits  ; 512 LEs       ; 0 LEs                ; 512 LEs                ; Yes        ; |de1soc_base|M10K_read_buffer:r0|store_vec[5][136] ;
+; 4:1                ; 256 bits  ; 512 LEs       ; 0 LEs                ; 512 LEs                ; Yes        ; |de1soc_base|M10K_read_buffer:r0|store_vec[6][72]  ;
+; 4:1                ; 256 bits  ; 512 LEs       ; 0 LEs                ; 512 LEs                ; Yes        ; |de1soc_base|M10K_read_buffer:r0|store_vec[7][8]   ;
+; 4:1                ; 256 bits  ; 512 LEs       ; 0 LEs                ; 512 LEs                ; Yes        ; |de1soc_base|M10K_read_buffer:r0|store_vec[0][102] ;
+; 4:1                ; 256 bits  ; 512 LEs       ; 0 LEs                ; 512 LEs                ; Yes        ; |de1soc_base|M10K_read_buffer:r1|store_vec[1][126] ;
+; 4:1                ; 256 bits  ; 512 LEs       ; 0 LEs                ; 512 LEs                ; Yes        ; |de1soc_base|M10K_read_buffer:r1|store_vec[2][127] ;
+; 4:1                ; 256 bits  ; 512 LEs       ; 0 LEs                ; 512 LEs                ; Yes        ; |de1soc_base|M10K_read_buffer:r1|store_vec[3][10]  ;
+; 4:1                ; 256 bits  ; 512 LEs       ; 0 LEs                ; 512 LEs                ; Yes        ; |de1soc_base|M10K_read_buffer:r1|store_vec[4][124] ;
+; 4:1                ; 256 bits  ; 512 LEs       ; 0 LEs                ; 512 LEs                ; Yes        ; |de1soc_base|M10K_read_buffer:r1|store_vec[5][255] ;
+; 4:1                ; 256 bits  ; 512 LEs       ; 0 LEs                ; 512 LEs                ; Yes        ; |de1soc_base|M10K_read_buffer:r1|store_vec[6][123] ;
+; 4:1                ; 256 bits  ; 512 LEs       ; 0 LEs                ; 512 LEs                ; Yes        ; |de1soc_base|M10K_read_buffer:r1|store_vec[7][131] ;
+; 4:1                ; 256 bits  ; 512 LEs       ; 0 LEs                ; 512 LEs                ; Yes        ; |de1soc_base|M10K_read_buffer:r1|store_vec[0][114] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Source assignments for M10K_16_256:MEM|altsyncram:mem_row_rtl_0|altsyncram_dvt1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------+
+; Assignment                      ; Value              ; From ; To                               ;
++---------------------------------+--------------------+------+----------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                ;
++---------------------------------+--------------------+------+----------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |de1soc_base ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; DATA_LEN       ; 32    ; Signed Integer                                     ;
+; M              ; 8     ; Signed Integer                                     ;
+; N              ; 8     ; Signed Integer                                     ;
+; K              ; 8     ; Signed Integer                                     ;
+; CLK_CYCLE      ; 10    ; Signed Integer                                     ;
+; ADDRESS_SIZE   ; 4     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: M10K_read_buffer:r0 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; DATA_LEN       ; 32    ; Signed Integer                          ;
+; M              ; 8     ; Signed Integer                          ;
+; N              ; 8     ; Signed Integer                          ;
+; ADDRESS_SIZE   ; 4     ; Signed Integer                          ;
+; OFFSET         ; 0     ; Signed Integer                          ;
+; READ0          ; 0000  ; Unsigned Binary                         ;
+; READ1          ; 0001  ; Unsigned Binary                         ;
+; READ2          ; 0010  ; Unsigned Binary                         ;
+; READ3          ; 0011  ; Unsigned Binary                         ;
+; READ4          ; 0100  ; Unsigned Binary                         ;
+; READ5          ; 0101  ; Unsigned Binary                         ;
+; READ6          ; 0110  ; Unsigned Binary                         ;
+; READ7          ; 0111  ; Unsigned Binary                         ;
+; WAIT           ; 1000  ; Unsigned Binary                         ;
+; DONE           ; 1001  ; Unsigned Binary                         ;
+; IDLE           ; 1111  ; Unsigned Binary                         ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: M10K_write:w0 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; DATA_LEN       ; 32    ; Signed Integer                    ;
+; M              ; 8     ; Signed Integer                    ;
+; N              ; 8     ; Signed Integer                    ;
+; ADDRESS_SIZE   ; 4     ; Signed Integer                    ;
+; OFFSET         ; 8     ; Signed Integer                    ;
+; WRITE0         ; 0000  ; Unsigned Binary                   ;
+; WRITE1         ; 0001  ; Unsigned Binary                   ;
+; WRITE2         ; 0010  ; Unsigned Binary                   ;
+; WRITE3         ; 0011  ; Unsigned Binary                   ;
+; WRITE4         ; 0100  ; Unsigned Binary                   ;
+; WRITE5         ; 0101  ; Unsigned Binary                   ;
+; WRITE6         ; 0110  ; Unsigned Binary                   ;
+; WRITE7         ; 0111  ; Unsigned Binary                   ;
+; DONE           ; 1000  ; Unsigned Binary                   ;
+; IDLE           ; 1111  ; Unsigned Binary                   ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: M10K_read_buffer:r1 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; DATA_LEN       ; 32    ; Signed Integer                          ;
+; M              ; 8     ; Signed Integer                          ;
+; N              ; 8     ; Signed Integer                          ;
+; ADDRESS_SIZE   ; 4     ; Signed Integer                          ;
+; OFFSET         ; 8     ; Signed Integer                          ;
+; READ0          ; 0000  ; Unsigned Binary                         ;
+; READ1          ; 0001  ; Unsigned Binary                         ;
+; READ2          ; 0010  ; Unsigned Binary                         ;
+; READ3          ; 0011  ; Unsigned Binary                         ;
+; READ4          ; 0100  ; Unsigned Binary                         ;
+; READ5          ; 0101  ; Unsigned Binary                         ;
+; READ6          ; 0110  ; Unsigned Binary                         ;
+; READ7          ; 0111  ; Unsigned Binary                         ;
+; WAIT           ; 1000  ; Unsigned Binary                         ;
+; DONE           ; 1001  ; Unsigned Binary                         ;
+; IDLE           ; 1111  ; Unsigned Binary                         ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: M10K_16_256:MEM ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; DATA_LEN       ; 32    ; Signed Integer                      ;
+; M              ; 8     ; Signed Integer                      ;
+; N              ; 8     ; Signed Integer                      ;
+; ADDRESS_SIZE   ; 4     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: M10K_16_256:MEM|altsyncram:mem_row_rtl_0              ;
++------------------------------------+--------------------------------------------------+----------------+
+; Parameter Name                     ; Value                                            ; Type           ;
++------------------------------------+--------------------------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                                ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                                               ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                              ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                                               ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                              ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                                ; Untyped        ;
+; OPERATION_MODE                     ; DUAL_PORT                                        ; Untyped        ;
+; WIDTH_A                            ; 256                                              ; Untyped        ;
+; WIDTHAD_A                          ; 4                                                ; Untyped        ;
+; NUMWORDS_A                         ; 16                                               ; Untyped        ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                     ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                                             ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                                             ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                                             ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                                             ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                                             ; Untyped        ;
+; WIDTH_B                            ; 256                                              ; Untyped        ;
+; WIDTHAD_B                          ; 4                                                ; Untyped        ;
+; NUMWORDS_B                         ; 16                                               ; Untyped        ;
+; INDATA_REG_B                       ; CLOCK1                                           ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                           ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                                           ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK0                                           ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                     ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                                           ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                                             ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                                             ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                                             ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                                             ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                                             ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                                             ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                                ; Untyped        ;
+; WIDTH_BYTEENA_B                    ; 1                                                ; Untyped        ;
+; RAM_BLOCK_TYPE                     ; M10K                                             ; Untyped        ;
+; BYTE_SIZE                          ; 8                                                ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                         ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                             ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                             ; Untyped        ;
+; INIT_FILE                          ; db/de1soc_base.ram0_M10K_16_256_125f1826.hdl.mif ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                           ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                                ; Untyped        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                           ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                           ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                           ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                           ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                  ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                  ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                                            ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                            ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                                                ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone V                                        ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_dvt1                                  ; Untyped        ;
++------------------------------------+--------------------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                     ;
++-------------------------------------------+------------------------------------------+
+; Name                                      ; Value                                    ;
++-------------------------------------------+------------------------------------------+
+; Number of entity instances                ; 1                                        ;
+; Entity Instance                           ; M10K_16_256:MEM|altsyncram:mem_row_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                ;
+;     -- WIDTH_A                            ; 256                                      ;
+;     -- NUMWORDS_A                         ; 16                                       ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                             ;
+;     -- WIDTH_B                            ; 256                                      ;
+;     -- NUMWORDS_B                         ; 16                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                   ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                             ;
+;     -- RAM_BLOCK_TYPE                     ; M10K                                     ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                 ;
++-------------------------------------------+------------------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "M10K_read_buffer:r1"           ;
++--------------+--------+----------+------------------------+
+; Port         ; Type   ; Severity ; Details                ;
++--------------+--------+----------+------------------------+
+; i_read_reset ; Input  ; Info     ; Explicitly unconnected ;
+; o_done       ; Output ; Info     ; Explicitly unconnected ;
++--------------+--------+----------+------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "M10K_write:w0"                         ;
++----------------------+--------+----------+------------------------+
+; Port                 ; Type   ; Severity ; Details                ;
++----------------------+--------+----------+------------------------+
+; i_in_mat[2018..2016] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1986..1985] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1889..1888] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1763..1760] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1731..1729] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1699..1698] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1667..1666] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1633..1632] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1506..1504] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1474..1473] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1377..1376] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1252..1248] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1220..1217] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1188..1186] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1156..1154] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1124..1123] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1121..1120] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1092..1091] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1060..1059] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1028..1027] ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[994..992]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[962..961]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[865..864]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[739..736]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[707..705]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[675..674]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[643..642]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[609..608]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[485..484]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[482..480]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[453..452]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[450..449]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[421..420]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[389..388]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[357..356]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[353..352]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[325..324]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[293..292]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[261..260]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[229..224]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[197..193]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[165..162]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[133..130]   ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[101..99]    ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[97..96]     ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[69..67]     ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[37..35]     ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[5..3]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[2047..2019] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[2015..1987] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1984..1955] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1951..1923] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1921..1890] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1887..1858] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1856..1825] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1823..1764] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1759..1732] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1728..1700] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1695..1668] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1665..1636] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1631..1604] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1600..1572] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1570..1569] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1567..1540] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1538..1509] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1503..1477] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1472..1445] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1439..1413] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1409..1381] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1379..1378] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1375..1349] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1347..1346] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1344..1317] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1315..1313] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1311..1285] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1283..1253] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1247..1221] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1216..1189] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1183..1157] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1153..1125] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1119..1093] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1088..1061] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1058..1057] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1055..1029] ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1026..998]  ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[996..995]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[991..966]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[964..963]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[960..934]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[932..931]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[927..902]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[900..899]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[897..870]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[868..866]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[863..838]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[836..834]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[832..806]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[804..801]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[799..774]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[772..742]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[735..710]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[704..678]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[671..646]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[641..614]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[607..582]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[576..550]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[546..545]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[543..518]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[514..486]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[479..454]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[448..422]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[415..390]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[385..358]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[355..354]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[351..326]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[323..322]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[320..294]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[291..289]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[287..262]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[259..230]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[223..198]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[192..166]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[159..134]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[129..102]   ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[95..70]     ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[64..38]     ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[34..33]     ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[31..6]      ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[2..0]       ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1954]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1953]       ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1952]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1922]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1857]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1824]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1697]       ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1696]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1635]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1634]       ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1603]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1602]       ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1601]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1571]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1568]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1539]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1508]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1507]       ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1476]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1475]       ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1444]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1443]       ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1442]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1441]       ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1440]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1412]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1411]       ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1410]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1380]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1348]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1345]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1316]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1312]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1284]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1185]       ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1184]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1122]       ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1090]       ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[1089]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[1056]       ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[997]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[965]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[933]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[930]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[929]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[928]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[901]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[898]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[869]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[837]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[833]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[805]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[800]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[773]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[741]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[740]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[709]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[708]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[677]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[676]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[673]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[672]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[645]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[644]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[613]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[612]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[611]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[610]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[581]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[580]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[579]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[578]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[577]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[549]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[548]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[547]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[544]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[517]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[516]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[515]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[483]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[451]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[419]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[418]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[417]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[416]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[387]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[386]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[321]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[288]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[161]        ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[160]        ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[98]         ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[66]         ; Input  ; Info     ; Stuck at GND           ;
+; i_in_mat[65]         ; Input  ; Info     ; Stuck at VCC           ;
+; i_in_mat[32]         ; Input  ; Info     ; Stuck at VCC           ;
+; o_state              ; Output ; Info     ; Explicitly unconnected ;
++----------------------+--------+----------+------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "M10K_read_buffer:r0"          ;
++--------------+-------+----------+------------------------+
+; Port         ; Type  ; Severity ; Details                ;
++--------------+-------+----------+------------------------+
+; i_read_reset ; Input ; Info     ; Explicitly unconnected ;
++--------------+-------+----------+------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 4144                        ;
+;     CLR               ; 48                          ;
+;     ENA CLR SCLR      ; 4096                        ;
+; arriav_io_obuf        ; 24                          ;
+; arriav_lcell_comb     ; 903                         ;
+;     normal            ; 903                         ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 66                          ;
+;         5 data inputs ; 110                         ;
+;         6 data inputs ; 710                         ;
+; boundary_port         ; 168                         ;
+; stratixv_ram_block    ; 256                         ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 4.24                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri Jun 02 20:03:28 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de1soc_base -c de1soc_base
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/m10k_write.v
+    Info (12023): Found entity 1: M10K_write File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_write.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/m10k_read_write.v
+    Info (12023): Found entity 1: M10K_read_write File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_write.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/m10k_read_buffer.v
+    Info (12023): Found entity 1: M10K_read_buffer File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/m10k_16_256.v
+    Info (12023): Found entity 1: M10K_16_256 File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_16_256.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/de1soc_base.v
+    Info (12023): Found entity 1: de1soc_base File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 6
+Warning (10236): Verilog HDL Implicit Net warning at de1soc_base.v(213): created implicit net for "o_store_start" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 213
+Info (12127): Elaborating entity "de1soc_base" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at de1soc_base.v(188): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 188
+Warning (10034): Output port "DRAM_ADDR" at de1soc_base.v(29) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 29
+Warning (10034): Output port "DRAM_BA" at de1soc_base.v(30) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 30
+Warning (10034): Output port "HEX0" at de1soc_base.v(46) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 46
+Warning (10034): Output port "HEX1" at de1soc_base.v(47) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 47
+Warning (10034): Output port "HEX2" at de1soc_base.v(48) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 48
+Warning (10034): Output port "HEX3" at de1soc_base.v(49) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 49
+Warning (10034): Output port "HEX4" at de1soc_base.v(50) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 50
+Warning (10034): Output port "HEX5" at de1soc_base.v(51) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 51
+Warning (10034): Output port "LEDR[9..3]" at de1soc_base.v(61) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 61
+Warning (10034): Output port "VGA_B" at de1soc_base.v(81) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 81
+Warning (10034): Output port "VGA_G" at de1soc_base.v(83) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 83
+Warning (10034): Output port "VGA_R" at de1soc_base.v(85) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 85
+Warning (10034): Output port "ADC_CONVST" at de1soc_base.v(9) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 9
+Warning (10034): Output port "ADC_DIN" at de1soc_base.v(10) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 10
+Warning (10034): Output port "ADC_SCLK" at de1soc_base.v(12) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 12
+Warning (10034): Output port "AUD_DACDAT" at de1soc_base.v(18) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 18
+Warning (10034): Output port "AUD_XCK" at de1soc_base.v(20) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 20
+Warning (10034): Output port "DRAM_CAS_N" at de1soc_base.v(31) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 31
+Warning (10034): Output port "DRAM_CKE" at de1soc_base.v(32) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 32
+Warning (10034): Output port "DRAM_CLK" at de1soc_base.v(33) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 33
+Warning (10034): Output port "DRAM_CS_N" at de1soc_base.v(34) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 34
+Warning (10034): Output port "DRAM_LDQM" at de1soc_base.v(36) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 36
+Warning (10034): Output port "DRAM_RAS_N" at de1soc_base.v(37) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 37
+Warning (10034): Output port "DRAM_UDQM" at de1soc_base.v(38) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 38
+Warning (10034): Output port "DRAM_WE_N" at de1soc_base.v(39) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 39
+Warning (10034): Output port "FPGA_I2C_SCLK" at de1soc_base.v(42) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 42
+Warning (10034): Output port "IRDA_TXD" at de1soc_base.v(55) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 55
+Warning (10034): Output port "TD_RESET_N" at de1soc_base.v(76) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 76
+Warning (10034): Output port "VGA_BLANK_N" at de1soc_base.v(80) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 80
+Warning (10034): Output port "VGA_CLK" at de1soc_base.v(82) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 82
+Warning (10034): Output port "VGA_HS" at de1soc_base.v(84) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 84
+Warning (10034): Output port "VGA_SYNC_N" at de1soc_base.v(86) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 86
+Warning (10034): Output port "VGA_VS" at de1soc_base.v(88) has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 88
+Info (12128): Elaborating entity "M10K_read_buffer" for hierarchy "M10K_read_buffer:r0" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 202
+Warning (10230): Verilog HDL assignment warning at M10K_read_buffer.v(117): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 117
+Warning (10230): Verilog HDL assignment warning at M10K_read_buffer.v(118): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 118
+Warning (10230): Verilog HDL assignment warning at M10K_read_buffer.v(119): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 119
+Warning (10230): Verilog HDL assignment warning at M10K_read_buffer.v(120): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 120
+Warning (10230): Verilog HDL assignment warning at M10K_read_buffer.v(121): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 121
+Warning (10230): Verilog HDL assignment warning at M10K_read_buffer.v(122): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 122
+Warning (10230): Verilog HDL assignment warning at M10K_read_buffer.v(123): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 123
+Warning (10230): Verilog HDL assignment warning at M10K_read_buffer.v(124): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 124
+Info (10264): Verilog HDL Case Statement information at M10K_read_buffer.v(116): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 116
+Info (10264): Verilog HDL Case Statement information at M10K_read_buffer.v(142): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 142
+Info (12128): Elaborating entity "M10K_write" for hierarchy "M10K_write:w0" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 216
+Warning (10230): Verilog HDL assignment warning at M10K_write.v(114): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_write.v Line: 114
+Warning (10230): Verilog HDL assignment warning at M10K_write.v(119): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_write.v Line: 119
+Warning (10230): Verilog HDL assignment warning at M10K_write.v(124): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_write.v Line: 124
+Warning (10230): Verilog HDL assignment warning at M10K_write.v(129): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_write.v Line: 129
+Warning (10230): Verilog HDL assignment warning at M10K_write.v(134): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_write.v Line: 134
+Warning (10230): Verilog HDL assignment warning at M10K_write.v(139): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_write.v Line: 139
+Warning (10230): Verilog HDL assignment warning at M10K_write.v(144): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_write.v Line: 144
+Warning (10230): Verilog HDL assignment warning at M10K_write.v(149): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_write.v Line: 149
+Info (10264): Verilog HDL Case Statement information at M10K_write.v(112): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_write.v Line: 112
+Info (12128): Elaborating entity "M10K_read_buffer" for hierarchy "M10K_read_buffer:r1" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 232
+Warning (10230): Verilog HDL assignment warning at M10K_read_buffer.v(117): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 117
+Warning (10230): Verilog HDL assignment warning at M10K_read_buffer.v(118): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 118
+Warning (10230): Verilog HDL assignment warning at M10K_read_buffer.v(119): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 119
+Warning (10230): Verilog HDL assignment warning at M10K_read_buffer.v(120): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 120
+Warning (10230): Verilog HDL assignment warning at M10K_read_buffer.v(121): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 121
+Warning (10230): Verilog HDL assignment warning at M10K_read_buffer.v(122): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 122
+Warning (10230): Verilog HDL assignment warning at M10K_read_buffer.v(123): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 123
+Warning (10230): Verilog HDL assignment warning at M10K_read_buffer.v(124): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 124
+Info (10264): Verilog HDL Case Statement information at M10K_read_buffer.v(116): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 116
+Info (10264): Verilog HDL Case Statement information at M10K_read_buffer.v(142): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_buffer.v Line: 142
+Info (12128): Elaborating entity "M10K_16_256" for hierarchy "M10K_16_256:MEM" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 241
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "M10K_16_256:MEM|mem_row_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 256
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 16
+        Info (286033): Parameter WIDTH_B set to 256
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 16
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter RAM_BLOCK_TYPE set to M10K
+        Info (286033): Parameter INIT_FILE set to db/de1soc_base.ram0_M10K_16_256_125f1826.hdl.mif
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+Info (12130): Elaborated megafunction instantiation "M10K_16_256:MEM|altsyncram:mem_row_rtl_0"
+Info (12133): Instantiated megafunction "M10K_16_256:MEM|altsyncram:mem_row_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "256"
+    Info (12134): Parameter "WIDTHAD_A" = "4"
+    Info (12134): Parameter "NUMWORDS_A" = "16"
+    Info (12134): Parameter "WIDTH_B" = "256"
+    Info (12134): Parameter "WIDTHAD_B" = "4"
+    Info (12134): Parameter "NUMWORDS_B" = "16"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "RAM_BLOCK_TYPE" = "M10K"
+    Info (12134): Parameter "INIT_FILE" = "db/de1soc_base.ram0_M10K_16_256_125f1826.hdl.mif"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_dvt1.tdf
+    Info (12023): Found entity 1: altsyncram_dvt1 File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/db/altsyncram_dvt1.tdf Line: 28
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "AUD_ADCLRCK" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 16
+    Warning (13040): bidirectional pin "AUD_BCLK" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 17
+    Warning (13040): bidirectional pin "AUD_DACLRCK" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 19
+    Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 35
+    Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 35
+    Warning (13040): bidirectional pin "DRAM_DQ[2]" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 35
+    Warning (13040): bidirectional pin "DRAM_DQ[3]" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 35
+    Warning (13040): bidirectional pin "DRAM_DQ[4]" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 35
+    Warning (13040): bidirectional pin "DRAM_DQ[5]" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 35
+    Warning (13040): bidirectional pin "DRAM_DQ[6]" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 35
+    Warning (13040): bidirectional pin "DRAM_DQ[7]" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 35
+    Warning (13040): bidirectional pin "DRAM_DQ[8]" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 35
+    Warning (13040): bidirectional pin "DRAM_DQ[9]" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 35
+    Warning (13040): bidirectional pin "DRAM_DQ[10]" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 35
+    Warning (13040): bidirectional pin "DRAM_DQ[11]" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 35
+    Warning (13040): bidirectional pin "DRAM_DQ[12]" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 35
+    Warning (13040): bidirectional pin "DRAM_DQ[13]" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 35
+    Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 35
+    Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 35
+    Warning (13040): bidirectional pin "FPGA_I2C_SDAT" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 43
+    Warning (13040): bidirectional pin "PS2_CLK" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 64
+    Warning (13040): bidirectional pin "PS2_CLK2" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 65
+    Warning (13040): bidirectional pin "PS2_DAT" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 66
+    Warning (13040): bidirectional pin "PS2_DAT2" has no driver File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 67
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ADC_CONVST" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 9
+    Warning (13410): Pin "ADC_DIN" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 10
+    Warning (13410): Pin "ADC_SCLK" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 12
+    Warning (13410): Pin "AUD_DACDAT" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 18
+    Warning (13410): Pin "AUD_XCK" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 20
+    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 29
+    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 29
+    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 29
+    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 29
+    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 29
+    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 29
+    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 29
+    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 29
+    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 29
+    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 29
+    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 29
+    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 29
+    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 29
+    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 30
+    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 30
+    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 31
+    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 32
+    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 33
+    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 34
+    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 36
+    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 37
+    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 38
+    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 39
+    Warning (13410): Pin "FPGA_I2C_SCLK" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 42
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 46
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 46
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 46
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 46
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 46
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 46
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 46
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 47
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 47
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 47
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 47
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 47
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 47
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 47
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 48
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 48
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 48
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 48
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 48
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 48
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 48
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 49
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 49
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 49
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 49
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 49
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 49
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 49
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 50
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 50
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 50
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 50
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 50
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 50
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 50
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 51
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 51
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 51
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 51
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 51
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 51
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 51
+    Warning (13410): Pin "IRDA_TXD" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 55
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 61
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 61
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 61
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 61
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 61
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 61
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 61
+    Warning (13410): Pin "TD_RESET_N" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 76
+    Warning (13410): Pin "VGA_BLANK_N" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 80
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 81
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 81
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 81
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 81
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 81
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 81
+    Warning (13410): Pin "VGA_B[6]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 81
+    Warning (13410): Pin "VGA_B[7]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 81
+    Warning (13410): Pin "VGA_CLK" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 82
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 83
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 83
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 83
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 83
+    Warning (13410): Pin "VGA_G[4]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 83
+    Warning (13410): Pin "VGA_G[5]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 83
+    Warning (13410): Pin "VGA_G[6]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 83
+    Warning (13410): Pin "VGA_G[7]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 83
+    Warning (13410): Pin "VGA_HS" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 84
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 85
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 85
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 85
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 85
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 85
+    Warning (13410): Pin "VGA_R[5]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 85
+    Warning (13410): Pin "VGA_R[6]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 85
+    Warning (13410): Pin "VGA_R[7]" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 85
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 86
+    Warning (13410): Pin "VGA_VS" is stuck at GND File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 88
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 12 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/de1soc_base.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 29 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ADC_DOUT" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 11
+    Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 15
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 23
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 24
+    Warning (15610): No output dependent on input pin "CLOCK4_50" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 25
+    Warning (15610): No output dependent on input pin "IRDA_RXD" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 54
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 58
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 58
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 58
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 70
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 70
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 70
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 70
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 70
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 70
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 70
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 70
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 70
+    Warning (15610): No output dependent on input pin "TD_CLK27" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 73
+    Warning (15610): No output dependent on input pin "TD_DATA[0]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 74
+    Warning (15610): No output dependent on input pin "TD_DATA[1]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 74
+    Warning (15610): No output dependent on input pin "TD_DATA[2]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 74
+    Warning (15610): No output dependent on input pin "TD_DATA[3]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 74
+    Warning (15610): No output dependent on input pin "TD_DATA[4]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 74
+    Warning (15610): No output dependent on input pin "TD_DATA[5]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 74
+    Warning (15610): No output dependent on input pin "TD_DATA[6]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 74
+    Warning (15610): No output dependent on input pin "TD_DATA[7]" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 74
+    Warning (15610): No output dependent on input pin "TD_HS" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 75
+    Warning (15610): No output dependent on input pin "TD_VS" File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/de1soc_base.v Line: 77
+Info (21057): Implemented 5448 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 32 input pins
+    Info (21059): Implemented 112 output pins
+    Info (21060): Implemented 24 bidirectional pins
+    Info (21061): Implemented 5024 logic cells
+    Info (21064): Implemented 256 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 225 warnings
+    Info: Peak virtual memory: 4878 megabytes
+    Info: Processing ended: Fri Jun 02 20:03:56 2023
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:17
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/de1soc_base.map.smsg.
+
+

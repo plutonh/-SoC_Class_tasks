@@ -1,0 +1,155 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26
+vM10K_16_256
+!s110 1685697389
+!i10b 1
+!s100 ][1<RP;<M9Zm@[WI?8bz:3
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I]7K0SffY=eSZKe:YGIF5S1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02
+w1685601873
+8C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_16_256.v
+FC:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_16_256.v
+!i122 587
+L0 1 47
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1685697389.000000
+!s107 C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_16_256.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_16_256.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@m10@k_16_256
+vM10K_16_256_test
+Z6 !s110 1685697391
+!i10b 1
+!s100 9=Z28igV?1^g`:^U=mUFa2
+R0
+I[dYK^57MMh71hkPB<dWHG3
+R1
+R2
+Z7 w1685605887
+Z8 8C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/tb_M10K_read_write.v
+Z9 FC:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/tb_M10K_read_write.v
+!i122 591
+L0 102 70
+R3
+r1
+!s85 0
+31
+Z10 !s108 1685697390.000000
+!s107 C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/tb_M10K_read_write.v|
+Z11 !s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/tb_M10K_read_write.v|
+!i113 1
+R4
+R5
+n@m10@k_16_256_test
+vM10K_read_buffer
+Z12 !s110 1685697390
+!i10b 1
+!s100 hPKOUiG7YkeSD^6Mn45>R2
+R0
+I`;AlcdkM7n@7:H:>fHUJL2
+R1
+R2
+w1685697366
+8C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_read_buffer.v
+FC:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_read_buffer.v
+!i122 588
+L0 1 187
+R3
+r1
+!s85 0
+31
+R10
+!s107 C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_read_buffer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_read_buffer.v|
+!i113 1
+R4
+R5
+n@m10@k_read_buffer
+vM10K_read_write
+R12
+!i10b 1
+!s100 UE9V43]LaHIgMi:BR?^_U0
+R0
+IF9oFC7bL`ZEMz>>k:<l?P3
+R1
+R2
+w1685618254
+8C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_read_write.v
+FC:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_read_write.v
+!i122 589
+L0 2 163
+R3
+r1
+!s85 0
+31
+R10
+!s107 C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_read_write.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_read_write.v|
+!i113 1
+R4
+R5
+n@m10@k_read_write
+vM10K_write
+R12
+!i10b 1
+!s100 mXD^cF=3X4_CK@I4V9HVX3
+R0
+IlzNY^jO_39f:FzNK2_:?G3
+R1
+R2
+w1685697377
+8C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_write.v
+FC:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_write.v
+!i122 590
+L0 2 161
+R3
+r1
+!s85 0
+31
+R10
+!s107 C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_write.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_write.v|
+!i113 1
+R4
+R5
+n@m10@k_write
+vtb_M10K_read_write
+R6
+!i10b 1
+!s100 [XPZFe;mJHGcQ^R?J0HL83
+R0
+I^BgMDnfg<FfBXZJ=FCO6F0
+R1
+R2
+R7
+R8
+R9
+!i122 591
+L0 2 99
+R3
+r1
+!s85 0
+31
+R10
+Z13 !s107 C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/tb_M10K_read_write.v|
+R11
+!i113 1
+R4
+R5
+ntb_@m10@k_read_write

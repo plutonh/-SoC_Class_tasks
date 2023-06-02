@@ -1,0 +1,41 @@
+
+State Machine - |de1soc_base|M10K_read_buffer:r1|state
+Name state.READ0 state.DONE state.WAIT state.READ7 state.READ6 state.READ5 state.READ4 state.READ3 state.READ2 state.READ1 state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 
+state.READ1 0 0 0 0 0 0 0 0 0 1 1 
+state.READ2 0 0 0 0 0 0 0 0 1 0 1 
+state.READ3 0 0 0 0 0 0 0 1 0 0 1 
+state.READ4 0 0 0 0 0 0 1 0 0 0 1 
+state.READ5 0 0 0 0 0 1 0 0 0 0 1 
+state.READ6 0 0 0 0 1 0 0 0 0 0 1 
+state.READ7 0 0 0 1 0 0 0 0 0 0 1 
+state.WAIT 0 0 1 0 0 0 0 0 0 0 1 
+state.DONE 0 1 0 0 0 0 0 0 0 0 1 
+state.READ0 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |de1soc_base|M10K_write:w0|state
+Name state.WRITE0 state.DONE state.WRITE7 state.WRITE6 state.WRITE5 state.WRITE4 state.WRITE3 state.WRITE2 state.WRITE1 state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 
+state.WRITE1 0 0 0 0 0 0 0 0 1 1 
+state.WRITE2 0 0 0 0 0 0 0 1 0 1 
+state.WRITE3 0 0 0 0 0 0 1 0 0 1 
+state.WRITE4 0 0 0 0 0 1 0 0 0 1 
+state.WRITE5 0 0 0 0 1 0 0 0 0 1 
+state.WRITE6 0 0 0 1 0 0 0 0 0 1 
+state.WRITE7 0 0 1 0 0 0 0 0 0 1 
+state.DONE 0 1 0 0 0 0 0 0 0 1 
+state.WRITE0 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |de1soc_base|M10K_read_buffer:r0|state
+Name state.READ0 state.DONE state.WAIT state.READ7 state.READ6 state.READ5 state.READ4 state.READ3 state.READ2 state.READ1 state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 
+state.READ1 0 0 0 0 0 0 0 0 0 1 1 
+state.READ2 0 0 0 0 0 0 0 0 1 0 1 
+state.READ3 0 0 0 0 0 0 0 1 0 0 1 
+state.READ4 0 0 0 0 0 0 1 0 0 0 1 
+state.READ5 0 0 0 0 0 1 0 0 0 0 1 
+state.READ6 0 0 0 0 1 0 0 0 0 0 1 
+state.READ7 0 0 0 1 0 0 0 0 0 0 1 
+state.WAIT 0 0 1 0 0 0 0 0 0 0 1 
+state.DONE 0 1 0 0 0 0 0 0 0 0 1 
+state.READ0 1 0 0 0 0 0 0 0 0 0 1 

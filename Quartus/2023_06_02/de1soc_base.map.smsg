@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at M10K_read_write.v(25): object "READ_DONE" differs only in case from object "read_done" in the same scope File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_write.v Line: 25
+Info (10281): Verilog HDL Declaration information at M10K_read_write.v(36): object "WRITE_DONE" differs only in case from object "write_done" in the same scope File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_write.v Line: 36
+Info (10281): Verilog HDL Declaration information at M10K_read_write.v(75): object "parse_read_store" differs only in case from object "PARSE_READ_STORE" in the same scope File: C:/intelFPGA_lite/20.1/Project/Quartus/2023_06_02/verilog/M10K_read_write.v Line: 75

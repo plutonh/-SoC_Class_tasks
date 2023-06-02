@@ -1,16 +1,16 @@
-C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_accum.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_accum.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module mat_accum
-
-Top level modules:
-	mat_accum
-
-} {} {}} C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_add.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_add.v
+C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_add.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_add.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module mat_add
 
 Top level modules:
 	mat_add
+
+} {} {}} C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_accum.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_accum.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mat_accum
+
+Top level modules:
+	mat_accum
 
 } {} {}} C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_mul.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_mul.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
