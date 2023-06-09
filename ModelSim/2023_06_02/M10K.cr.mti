@@ -1,17 +1,17 @@
-C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/tb_M10K_read_write.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/tb_M10K_read_write.v
+C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_16_256.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_16_256.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module M10K_16_256
+
+Top level modules:
+	M10K_16_256
+
+} {} {}} C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/tb_M10K_read_write.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/tb_M10K_read_write.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module tb_M10K_read_write
 -- Compiling module M10K_16_256_test
 
 Top level modules:
 	tb_M10K_read_write
-
-} {} {}} C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_16_256.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_16_256.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module M10K_16_256
-
-Top level modules:
-	M10K_16_256
 
 } {} {}} C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_read_buffer.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_02/M10K_read_buffer.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020

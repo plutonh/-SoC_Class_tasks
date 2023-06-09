@@ -88,16 +88,36 @@ module mat_outer#(
 		end
 	endgenerate
 
+	// generate // level 2
+	// 	for(i=0; i<M; i=i+1) begin: MULTIPLYING_1
+	// 		for(j=0; j<N; j=j+1) begin: MULTIPLYING_2
+	// 			always @(posedge i_clk, negedge i_rstn) begin
+	// 				if(!i_rstn) begin
+	// 					o_mat_c <= 0;
+	// 				end
+	// 				else begin
+	// 					o_mat_c[ROW_SIZE*i+DATA_LEN*j +:DATA_LEN] <= parse_mat_copy_a[j][i] * parse_mat_copy_b[i][j];
+	// 				end
+	// 			end
+	// 		end
+	// 	end
+	// endgenerate
+
 	generate // level 2
-		for(i=0; i<M; i=i+1) begin: MULTIPLYING_1
-			for(j=0; j<N; j=j+1) begin: MULTIPLYING_2
-				always @(posedge i_clk, negedge i_rstn) begin
-					if(!i_rstn) begin
-						o_mat_c <= 0;
-					end
-					else begin
-						o_mat_c[ROW_SIZE*i+DATA_LEN*j +:DATA_LEN] <= parse_mat_copy_a[j][i] * parse_mat_copy_b[i][j];
-					end
+		for(i=0; i<M; i=i+1) begin: MULTIPLYING
+			always @(posedge i_clk, negedge i_rstn) begin
+				if(!i_rstn) begin
+					o_mat_c <= 0;
+				end
+				else begin
+					o_mat_c[ROW_SIZE*i            +:DATA_LEN] <= parse_mat_copy_a[0][i] * parse_mat_copy_b[i][0];
+					o_mat_c[ROW_SIZE*i+DATA_LEN*1 +:DATA_LEN] <= parse_mat_copy_a[1][i] * parse_mat_copy_b[i][1];
+					o_mat_c[ROW_SIZE*i+DATA_LEN*2 +:DATA_LEN] <= parse_mat_copy_a[2][i] * parse_mat_copy_b[i][2];
+					o_mat_c[ROW_SIZE*i+DATA_LEN*3 +:DATA_LEN] <= parse_mat_copy_a[3][i] * parse_mat_copy_b[i][3];
+					o_mat_c[ROW_SIZE*i+DATA_LEN*4 +:DATA_LEN] <= parse_mat_copy_a[4][i] * parse_mat_copy_b[i][4];
+					o_mat_c[ROW_SIZE*i+DATA_LEN*5 +:DATA_LEN] <= parse_mat_copy_a[5][i] * parse_mat_copy_b[i][5];
+					o_mat_c[ROW_SIZE*i+DATA_LEN*6 +:DATA_LEN] <= parse_mat_copy_a[6][i] * parse_mat_copy_b[i][6];
+					o_mat_c[ROW_SIZE*i+DATA_LEN*7 +:DATA_LEN] <= parse_mat_copy_a[7][i] * parse_mat_copy_b[i][7];
 				end
 			end
 		end

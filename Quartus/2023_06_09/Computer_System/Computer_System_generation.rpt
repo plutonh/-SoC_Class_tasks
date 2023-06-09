@@ -1,0 +1,116 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\de1soc\DE1_SoC_Computer_copy\Computer_System.qsys --block-symbol-file --output-directory=D:\de1soc\DE1_SoC_Computer_copy\Computer_System --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading DE1_SoC_Computer_copy/Computer_System.qsys
+Progress: Reading input file
+Progress: Adding ARM_A9_HPS [altera_hps 18.1]
+Progress: Parameterizing module ARM_A9_HPS
+Progress: Adding System_PLL0 [altera_up_avalon_sys_sdram_pll 18.0]
+Progress: Parameterizing module System_PLL0
+Progress: Adding System_PLL1 [altera_up_avalon_sys_sdram_pll 18.0]
+Progress: Parameterizing module System_PLL1
+Progress: Adding onchip_sram0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_sram0
+Progress: Adding onchip_sram1 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_sram1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Computer_System.ARM_A9_HPS: HPS Main PLL counter settings: n = 0  m = 73
+Info: Computer_System.ARM_A9_HPS: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: Computer_System.ARM_A9_HPS: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: Computer_System.ARM_A9_HPS: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: Computer_System.ARM_A9_HPS: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: Computer_System.System_PLL0: Refclk Freq: 50.0
+Info: Computer_System.System_PLL1: Refclk Freq: 50.0
+Warning: Computer_System.: You have exported the interface onchip_sram0.s1 but not its associated clock interface.  Export the driver of onchip_sram0.clk1
+Warning: Computer_System.: You have exported the interface onchip_sram0.s1 but not its associated reset interface.  Export the driver(s) of onchip_sram0.reset1
+Warning: Computer_System.: You have exported the interface onchip_sram1.s1 but not its associated clock interface.  Export the driver of onchip_sram1.clk1
+Warning: Computer_System.: You have exported the interface onchip_sram1.s1 but not its associated reset interface.  Export the driver(s) of onchip_sram1.reset1
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\de1soc\DE1_SoC_Computer_copy\Computer_System.qsys --synthesis=VERILOG --output-directory=D:\de1soc\DE1_SoC_Computer_copy\Computer_System\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading DE1_SoC_Computer_copy/Computer_System.qsys
+Progress: Reading input file
+Progress: Adding ARM_A9_HPS [altera_hps 18.1]
+Progress: Parameterizing module ARM_A9_HPS
+Progress: Adding System_PLL0 [altera_up_avalon_sys_sdram_pll 18.0]
+Progress: Parameterizing module System_PLL0
+Progress: Adding System_PLL1 [altera_up_avalon_sys_sdram_pll 18.0]
+Progress: Parameterizing module System_PLL1
+Progress: Adding onchip_sram0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_sram0
+Progress: Adding onchip_sram1 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_sram1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Computer_System.ARM_A9_HPS: HPS Main PLL counter settings: n = 0  m = 73
+Info: Computer_System.ARM_A9_HPS: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: Computer_System.ARM_A9_HPS: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: Computer_System.ARM_A9_HPS: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: Computer_System.ARM_A9_HPS: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: Computer_System.System_PLL0: Refclk Freq: 50.0
+Info: Computer_System.System_PLL1: Refclk Freq: 50.0
+Warning: Computer_System.: You have exported the interface onchip_sram0.s1 but not its associated clock interface.  Export the driver of onchip_sram0.clk1
+Warning: Computer_System.: You have exported the interface onchip_sram0.s1 but not its associated reset interface.  Export the driver(s) of onchip_sram0.reset1
+Warning: Computer_System.: You have exported the interface onchip_sram1.s1 but not its associated clock interface.  Export the driver of onchip_sram1.clk1
+Warning: Computer_System.: You have exported the interface onchip_sram1.s1 but not its associated reset interface.  Export the driver(s) of onchip_sram1.reset1
+Info: Computer_System: Generating Computer_System "Computer_System" for QUARTUS_SYNTH
+Warning: ARM_A9_HPS.f2h_irq0: Cannot connect clock for irq_mapper.sender
+Warning: ARM_A9_HPS.f2h_irq0: Cannot connect reset for irq_mapper.sender
+Warning: ARM_A9_HPS.f2h_irq1: Cannot connect clock for irq_mapper_001.sender
+Warning: ARM_A9_HPS.f2h_irq1: Cannot connect reset for irq_mapper_001.sender
+Info: ARM_A9_HPS: "Running  for module: ARM_A9_HPS"
+Info: ARM_A9_HPS: HPS Main PLL counter settings: n = 0  m = 73
+Info: ARM_A9_HPS: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: ARM_A9_HPS: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: ARM_A9_HPS: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: ARM_A9_HPS: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: ARM_A9_HPS: "Computer_System" instantiated altera_hps "ARM_A9_HPS"
+Info: System_PLL0: "Computer_System" instantiated altera_up_avalon_sys_sdram_pll "System_PLL0"
+Info: onchip_sram0: Starting RTL generation for module 'Computer_System_onchip_sram0'
+Info: onchip_sram0:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Computer_System_onchip_sram0 --dir=C:/Users/Soomin/AppData/Local/Temp/alt9515_6352360974690128134.dir/0002_onchip_sram0_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Soomin/AppData/Local/Temp/alt9515_6352360974690128134.dir/0002_onchip_sram0_gen//Computer_System_onchip_sram0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_sram0: Done RTL generation for module 'Computer_System_onchip_sram0'
+Info: onchip_sram0: "Computer_System" instantiated altera_avalon_onchip_memory2 "onchip_sram0"
+Info: onchip_sram1: Starting RTL generation for module 'Computer_System_onchip_sram1'
+Info: onchip_sram1:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Computer_System_onchip_sram1 --dir=C:/Users/Soomin/AppData/Local/Temp/alt9515_6352360974690128134.dir/0003_onchip_sram1_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Soomin/AppData/Local/Temp/alt9515_6352360974690128134.dir/0003_onchip_sram1_gen//Computer_System_onchip_sram1_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_sram1: Done RTL generation for module 'Computer_System_onchip_sram1'
+Info: onchip_sram1: "Computer_System" instantiated altera_avalon_onchip_memory2 "onchip_sram1"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "Computer_System" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "Computer_System" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "Computer_System" instantiated altera_reset_controller "rst_controller"
+Info: fpga_interfaces: "ARM_A9_HPS" instantiated altera_interface_generator "fpga_interfaces"
+Info: hps_io: "ARM_A9_HPS" instantiated altera_hps_io "hps_io"
+Info: sys_pll: "System_PLL0" instantiated altera_pll "sys_pll"
+Info: reset_from_locked: "System_PLL0" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
+Info: onchip_sram0_s2_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "onchip_sram0_s2_translator"
+Info: ARM_A9_HPS_h2f_axi_master_agent: "mm_interconnect_0" instantiated altera_merlin_axi_master_ni "ARM_A9_HPS_h2f_axi_master_agent"
+Info: onchip_sram0_s2_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "onchip_sram0_s2_agent"
+Info: onchip_sram0_s2_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "onchip_sram0_s2_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: ARM_A9_HPS_h2f_axi_master_wr_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "ARM_A9_HPS_h2f_axi_master_wr_limiter"
+Info: Reusing file D:/de1soc/DE1_SoC_Computer_copy/Computer_System/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: onchip_sram0_s2_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "onchip_sram0_s2_burst_adapter"
+Info: Reusing file D:/de1soc/DE1_SoC_Computer_copy/Computer_System/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file D:/de1soc/DE1_SoC_Computer_copy/Computer_System/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/de1soc/DE1_SoC_Computer_copy/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: onchip_sram0_s2_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "onchip_sram0_s2_rsp_width_adapter"
+Info: Reusing file D:/de1soc/DE1_SoC_Computer_copy/Computer_System/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file D:/de1soc/DE1_SoC_Computer_copy/Computer_System/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: Computer_System: Done "Computer_System" with 28 modules, 88 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
