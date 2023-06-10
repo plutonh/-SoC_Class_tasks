@@ -10,117 +10,117 @@ z2
 cModel Technology
 dC:/intelFPGA_lite/20.1
 vmat_accum
-Z0 !s110 1686283764
+!s110 1686371846
 !i10b 1
 !s100 Pn>^iiR@8hJP0lKCUEmBE2
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
 IMmIg`YNfI@?Q^gle708P_3
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dC:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26
-w1685098548
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26
+w1686289046
 8C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_accum.v
 FC:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_accum.v
-!i122 256
+!i122 290
 L0 2 63
-Z4 OV;L;2020.1;71
+Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1686283764.000000
+Z4 !s108 1686371846.000000
 !s107 C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_accum.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_accum.v|
 !i113 1
-Z6 o-work work
-Z7 tCvgOpt 0
+Z5 o-work work
+Z6 tCvgOpt 0
 vmat_add
-R0
+Z7 !s110 1686371847
 !i10b 1
 !s100 bAo9^hgiY2E2@J9GV:3?k0
-R1
+R0
 IQF3K=B``EaF;LbCM8jTV]1
+R1
 R2
-R3
 w1684996522
 8C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_add.v
 FC:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_add.v
-!i122 257
+!i122 291
 L0 2 71
-R4
+R3
 r1
 !s85 0
 31
-R5
+R4
 !s107 C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_add.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_add.v|
 !i113 1
+R5
 R6
-R7
 vmat_mul
-Z8 !s110 1686283765
+R7
 !i10b 1
 !s100 <31<cmRW>e?@z;PKZ>`6a1
-R1
+R0
 I_f^`iPY31iOTJo5hBGF6]1
+R1
 R2
-R3
 w1685071794
 8C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_mul.v
 FC:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_mul.v
-!i122 258
+!i122 292
 L0 2 176
-R4
+R3
 r1
 !s85 0
 31
-R5
+Z8 !s108 1686371847.000000
 !s107 C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_mul.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_mul.v|
 !i113 1
+R5
 R6
-R7
 vmat_outer
-R8
+R7
 !i10b 1
-!s100 2<E]KM99>1LHoUSej7B0S3
+!s100 M]6Ak4bGOjL^bUhnBY;@H3
+R0
+IY?7Wa`<_:<KBFUhn66fUk0
 R1
-IYJIlZmQZ8koU]clYOWMYf0
 R2
-R3
-w1686283724
+w1686290161
 8C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_outer.v
 FC:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_outer.v
-!i122 259
-L0 2 125
-R4
+!i122 293
+L0 2 133
+R3
 r1
 !s85 0
 31
-Z9 !s108 1686283765.000000
+R8
 !s107 C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_outer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/mat_outer.v|
 !i113 1
+R5
 R6
-R7
 vtb_mat_mul
-R8
+R7
 !i10b 1
-!s100 >BjS5FkiD0heZTj9YS@__1
+!s100 h54<e@dT@Tgh5`?a^RAE11
+R0
+ITYmn00oVfE1UOX[WOQWZd1
 R1
-I]0BRZMHM?`h6o]L1i5RaS3
 R2
-R3
-w1684995050
+w1686289266
 8C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/tb_mat_mul.v
 FC:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/tb_mat_mul.v
-!i122 260
-L0 2 322
-R4
+!i122 294
+L0 2 470
+R3
 r1
 !s85 0
 31
-R9
+R8
 !s107 C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/tb_mat_mul.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/20.1/Project/ModelSim/2023_05_26/tb_mat_mul.v|
 !i113 1
+R5
 R6
-R7

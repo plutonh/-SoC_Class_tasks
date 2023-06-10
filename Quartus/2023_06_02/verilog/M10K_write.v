@@ -1,4 +1,3 @@
-`timescale 1ns / 1ns
 module M10K_write#(
 	parameter DATA_LEN = 32,
 	parameter M = 8,
@@ -111,44 +110,44 @@ module M10K_write#(
 		else begin
 			case(next_state)
 				WRITE0: begin
-							o_write_addr  <= OFFSET + WRITE0;
+							o_write_addr  <= OFFSET + next_state;
 							o_write_start <= 1;
-							o_write_data  <= in_vec[0];
+							o_write_data  <= in_vec[next_state];
 						end
 				WRITE1: begin
-							o_write_addr  <= OFFSET + WRITE1;
+							o_write_addr  <= OFFSET + next_state;
 							o_write_start <= 1;
-							o_write_data  <= in_vec[1];
+							o_write_data  <= in_vec[next_state];
 						end
 				WRITE2: begin
-							o_write_addr  <= OFFSET + WRITE2;
+							o_write_addr  <= OFFSET + next_state;
 							o_write_start <= 1;
-							o_write_data  <= in_vec[2];
+							o_write_data  <= in_vec[next_state];
 						end
 				WRITE3: begin
-							o_write_addr  <= OFFSET + WRITE3;
+							o_write_addr  <= OFFSET + next_state;
 							o_write_start <= 1;
-							o_write_data  <= in_vec[3];
+							o_write_data  <= in_vec[next_state];
 						end
 				WRITE4: begin
-							o_write_addr  <= OFFSET + WRITE4;
+							o_write_addr  <= OFFSET + next_state;
 							o_write_start <= 1;
-							o_write_data  <= in_vec[4];
+							o_write_data  <= in_vec[next_state];
 						end
 				WRITE5: begin
-							o_write_addr  <= OFFSET + WRITE5;
+							o_write_addr  <= OFFSET + next_state;
 							o_write_start <= 1;
-							o_write_data  <= in_vec[5];
+							o_write_data  <= in_vec[next_state];
 						end
 				WRITE6: begin
-							o_write_addr  <= OFFSET + WRITE6;
+							o_write_addr  <= OFFSET + next_state;
 							o_write_start <= 1;
-							o_write_data  <= in_vec[6];
+							o_write_data  <= in_vec[next_state];
 						end
 				WRITE7: begin
-							o_write_addr  <= OFFSET + WRITE7;
+							o_write_addr  <= OFFSET + next_state;
 							o_write_start <= 1;
-							o_write_data  <= in_vec[7];
+							o_write_data  <= in_vec[next_state];
 						end
 				default: begin
 							o_write_start <= 0;

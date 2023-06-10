@@ -44,7 +44,7 @@ module M10K_read_write#(
 	input							  i_start,
 	///////////// read  //////////
 	input   [DATA_LEN*N-1:0]	  	  i_read_data,
-	output	 [ADDRESS_SIZE-1:0]	  	  o_address,
+	output	[ADDRESS_SIZE-1:0]	  	  o_address,
 	output  						  o_wr_en,
 
 	///////////// write //////////	
@@ -159,6 +159,6 @@ genvar i;
 		assign parse_read_store[6][i] = read_store[((DATA_LEN*K)*6) + DATA_LEN*(i) +: DATA_LEN];
 		assign parse_read_store[7][i] = read_store[((DATA_LEN*K)*7) + DATA_LEN*(i) +: DATA_LEN];
 	end
-	endgenerate
+endgenerate
 
 endmodule

@@ -293,31 +293,179 @@ module tb_mat_mul;
 				i_mat_b[(ROW_SIZE*7) + (DATA_LEN*i) +: DATA_LEN] <= 3;
 				
 			end
-			else begin                        													   
-				i_mat_a[(ROW_SIZE*0) + (DATA_LEN*i) +: DATA_LEN] <= 0;
-				i_mat_a[(ROW_SIZE*1) + (DATA_LEN*i) +: DATA_LEN] <= 0;
-				i_mat_a[(ROW_SIZE*2) + (DATA_LEN*i) +: DATA_LEN] <= 0;
-				i_mat_a[(ROW_SIZE*3) + (DATA_LEN*i) +: DATA_LEN] <= 0;
-				i_mat_a[(ROW_SIZE*4) + (DATA_LEN*i) +: DATA_LEN] <= 0;
-				i_mat_a[(ROW_SIZE*5) + (DATA_LEN*i) +: DATA_LEN] <= 0;
-				i_mat_a[(ROW_SIZE*6) + (DATA_LEN*i) +: DATA_LEN] <= 0;
-				i_mat_a[(ROW_SIZE*7) + (DATA_LEN*i) +: DATA_LEN] <= 0;
+			// else begin                        													   
+			// 	i_mat_a[(ROW_SIZE*0) + (DATA_LEN*i) +: DATA_LEN] <= 0;
+			// 	i_mat_a[(ROW_SIZE*1) + (DATA_LEN*i) +: DATA_LEN] <= 0;
+			// 	i_mat_a[(ROW_SIZE*2) + (DATA_LEN*i) +: DATA_LEN] <= 0;
+			// 	i_mat_a[(ROW_SIZE*3) + (DATA_LEN*i) +: DATA_LEN] <= 0;
+			// 	i_mat_a[(ROW_SIZE*4) + (DATA_LEN*i) +: DATA_LEN] <= 0;
+			// 	i_mat_a[(ROW_SIZE*5) + (DATA_LEN*i) +: DATA_LEN] <= 0;
+			// 	i_mat_a[(ROW_SIZE*6) + (DATA_LEN*i) +: DATA_LEN] <= 0;
+			// 	i_mat_a[(ROW_SIZE*7) + (DATA_LEN*i) +: DATA_LEN] <= 0;
 																   
-				i_mat_b[(ROW_SIZE*0) + (DATA_LEN*i) +: DATA_LEN] <= 1;
-				i_mat_b[(ROW_SIZE*1) + (DATA_LEN*i) +: DATA_LEN] <= 1;
-				i_mat_b[(ROW_SIZE*2) + (DATA_LEN*i) +: DATA_LEN] <= 1;
-				i_mat_b[(ROW_SIZE*3) + (DATA_LEN*i) +: DATA_LEN] <= 1;
-				i_mat_b[(ROW_SIZE*4) + (DATA_LEN*i) +: DATA_LEN] <= 1;
-				i_mat_b[(ROW_SIZE*5) + (DATA_LEN*i) +: DATA_LEN] <= 1;
-				i_mat_b[(ROW_SIZE*6) + (DATA_LEN*i) +: DATA_LEN] <= 1;
-				i_mat_b[(ROW_SIZE*7) + (DATA_LEN*i) +: DATA_LEN] <= 1;
+			// 	i_mat_b[(ROW_SIZE*0) + (DATA_LEN*i) +: DATA_LEN] <= 1;
+			// 	i_mat_b[(ROW_SIZE*1) + (DATA_LEN*i) +: DATA_LEN] <= 1;
+			// 	i_mat_b[(ROW_SIZE*2) + (DATA_LEN*i) +: DATA_LEN] <= 1;
+			// 	i_mat_b[(ROW_SIZE*3) + (DATA_LEN*i) +: DATA_LEN] <= 1;
+			// 	i_mat_b[(ROW_SIZE*4) + (DATA_LEN*i) +: DATA_LEN] <= 1;
+			// 	i_mat_b[(ROW_SIZE*5) + (DATA_LEN*i) +: DATA_LEN] <= 1;
+			// 	i_mat_b[(ROW_SIZE*6) + (DATA_LEN*i) +: DATA_LEN] <= 1;
+			// 	i_mat_b[(ROW_SIZE*7) + (DATA_LEN*i) +: DATA_LEN] <= 1;
 				
-			end
+			// end
 		end
 		
 	end
 	endgenerate
-	
-	
+
+	always @(*) begin
+		if((mode == 32'd8)) begin
+			i_mat_a[(ROW_SIZE*0) + (DATA_LEN*0) +: DATA_LEN] <= 0;
+			i_mat_a[(ROW_SIZE*0) + (DATA_LEN*1) +: DATA_LEN] <= 1;
+			i_mat_a[(ROW_SIZE*0) + (DATA_LEN*2) +: DATA_LEN] <= 2;
+			i_mat_a[(ROW_SIZE*0) + (DATA_LEN*3) +: DATA_LEN] <= 3;
+			i_mat_a[(ROW_SIZE*0) + (DATA_LEN*4) +: DATA_LEN] <= 4;
+			i_mat_a[(ROW_SIZE*0) + (DATA_LEN*5) +: DATA_LEN] <= 5;
+			i_mat_a[(ROW_SIZE*0) + (DATA_LEN*6) +: DATA_LEN] <= 6;
+			i_mat_a[(ROW_SIZE*0) + (DATA_LEN*7) +: DATA_LEN] <= 7;
+
+			i_mat_a[(ROW_SIZE*1) + (DATA_LEN*0) +: DATA_LEN] <= 8;
+			i_mat_a[(ROW_SIZE*1) + (DATA_LEN*1) +: DATA_LEN] <= 9;
+			i_mat_a[(ROW_SIZE*1) + (DATA_LEN*2) +: DATA_LEN] <= 10;
+			i_mat_a[(ROW_SIZE*1) + (DATA_LEN*3) +: DATA_LEN] <= 11;
+			i_mat_a[(ROW_SIZE*1) + (DATA_LEN*4) +: DATA_LEN] <= 12;
+			i_mat_a[(ROW_SIZE*1) + (DATA_LEN*5) +: DATA_LEN] <= 13;
+			i_mat_a[(ROW_SIZE*1) + (DATA_LEN*6) +: DATA_LEN] <= 14;
+			i_mat_a[(ROW_SIZE*1) + (DATA_LEN*7) +: DATA_LEN] <= 15;
+
+			i_mat_a[(ROW_SIZE*2) + (DATA_LEN*0) +: DATA_LEN] <= 16;
+			i_mat_a[(ROW_SIZE*2) + (DATA_LEN*1) +: DATA_LEN] <= 17;
+			i_mat_a[(ROW_SIZE*2) + (DATA_LEN*2) +: DATA_LEN] <= 18;
+			i_mat_a[(ROW_SIZE*2) + (DATA_LEN*3) +: DATA_LEN] <= 19;
+			i_mat_a[(ROW_SIZE*2) + (DATA_LEN*4) +: DATA_LEN] <= 20;
+			i_mat_a[(ROW_SIZE*2) + (DATA_LEN*5) +: DATA_LEN] <= 21;
+			i_mat_a[(ROW_SIZE*2) + (DATA_LEN*6) +: DATA_LEN] <= 22;
+			i_mat_a[(ROW_SIZE*2) + (DATA_LEN*7) +: DATA_LEN] <= 23;
+
+			i_mat_a[(ROW_SIZE*3) + (DATA_LEN*0) +: DATA_LEN] <= 24;
+			i_mat_a[(ROW_SIZE*3) + (DATA_LEN*1) +: DATA_LEN] <= 25;
+			i_mat_a[(ROW_SIZE*3) + (DATA_LEN*2) +: DATA_LEN] <= 26;
+			i_mat_a[(ROW_SIZE*3) + (DATA_LEN*3) +: DATA_LEN] <= 27;
+			i_mat_a[(ROW_SIZE*3) + (DATA_LEN*4) +: DATA_LEN] <= 28;
+			i_mat_a[(ROW_SIZE*3) + (DATA_LEN*5) +: DATA_LEN] <= 29;
+			i_mat_a[(ROW_SIZE*3) + (DATA_LEN*6) +: DATA_LEN] <= 30;
+			i_mat_a[(ROW_SIZE*3) + (DATA_LEN*7) +: DATA_LEN] <= 31;
+
+			i_mat_a[(ROW_SIZE*4) + (DATA_LEN*0) +: DATA_LEN] <= 32;
+			i_mat_a[(ROW_SIZE*4) + (DATA_LEN*1) +: DATA_LEN] <= 33;
+			i_mat_a[(ROW_SIZE*4) + (DATA_LEN*2) +: DATA_LEN] <= 34;
+			i_mat_a[(ROW_SIZE*4) + (DATA_LEN*3) +: DATA_LEN] <= 35;
+			i_mat_a[(ROW_SIZE*4) + (DATA_LEN*4) +: DATA_LEN] <= 36;
+			i_mat_a[(ROW_SIZE*4) + (DATA_LEN*5) +: DATA_LEN] <= 37;
+			i_mat_a[(ROW_SIZE*4) + (DATA_LEN*6) +: DATA_LEN] <= 38;
+			i_mat_a[(ROW_SIZE*4) + (DATA_LEN*7) +: DATA_LEN] <= 39;
+
+			i_mat_a[(ROW_SIZE*5) + (DATA_LEN*0) +: DATA_LEN] <= 40;
+			i_mat_a[(ROW_SIZE*5) + (DATA_LEN*1) +: DATA_LEN] <= 41;
+			i_mat_a[(ROW_SIZE*5) + (DATA_LEN*2) +: DATA_LEN] <= 42;
+			i_mat_a[(ROW_SIZE*5) + (DATA_LEN*3) +: DATA_LEN] <= 43;
+			i_mat_a[(ROW_SIZE*5) + (DATA_LEN*4) +: DATA_LEN] <= 44;
+			i_mat_a[(ROW_SIZE*5) + (DATA_LEN*5) +: DATA_LEN] <= 45;
+			i_mat_a[(ROW_SIZE*5) + (DATA_LEN*6) +: DATA_LEN] <= 46;
+			i_mat_a[(ROW_SIZE*5) + (DATA_LEN*7) +: DATA_LEN] <= 47;
+
+			i_mat_a[(ROW_SIZE*6) + (DATA_LEN*0) +: DATA_LEN] <= 48;
+			i_mat_a[(ROW_SIZE*6) + (DATA_LEN*1) +: DATA_LEN] <= 49;
+			i_mat_a[(ROW_SIZE*6) + (DATA_LEN*2) +: DATA_LEN] <= 50;
+			i_mat_a[(ROW_SIZE*6) + (DATA_LEN*3) +: DATA_LEN] <= 51;
+			i_mat_a[(ROW_SIZE*6) + (DATA_LEN*4) +: DATA_LEN] <= 52;
+			i_mat_a[(ROW_SIZE*6) + (DATA_LEN*5) +: DATA_LEN] <= 53;
+			i_mat_a[(ROW_SIZE*6) + (DATA_LEN*6) +: DATA_LEN] <= 54;
+			i_mat_a[(ROW_SIZE*6) + (DATA_LEN*7) +: DATA_LEN] <= 55;
+
+			i_mat_a[(ROW_SIZE*7) + (DATA_LEN*0) +: DATA_LEN] <= 56;
+			i_mat_a[(ROW_SIZE*7) + (DATA_LEN*1) +: DATA_LEN] <= 57;
+			i_mat_a[(ROW_SIZE*7) + (DATA_LEN*2) +: DATA_LEN] <= 58;
+			i_mat_a[(ROW_SIZE*7) + (DATA_LEN*3) +: DATA_LEN] <= 59;
+			i_mat_a[(ROW_SIZE*7) + (DATA_LEN*4) +: DATA_LEN] <= 60;
+			i_mat_a[(ROW_SIZE*7) + (DATA_LEN*5) +: DATA_LEN] <= 61;
+			i_mat_a[(ROW_SIZE*7) + (DATA_LEN*6) +: DATA_LEN] <= 62;
+			i_mat_a[(ROW_SIZE*7) + (DATA_LEN*7) +: DATA_LEN] <= 63;
+
+
+			i_mat_b[(ROW_SIZE*0) + (DATA_LEN*0) +: DATA_LEN] <= 0;
+			i_mat_b[(ROW_SIZE*0) + (DATA_LEN*1) +: DATA_LEN] <= 2;
+			i_mat_b[(ROW_SIZE*0) + (DATA_LEN*2) +: DATA_LEN] <= 4;
+			i_mat_b[(ROW_SIZE*0) + (DATA_LEN*3) +: DATA_LEN] <= 6;
+			i_mat_b[(ROW_SIZE*0) + (DATA_LEN*4) +: DATA_LEN] <= 8;
+			i_mat_b[(ROW_SIZE*0) + (DATA_LEN*5) +: DATA_LEN] <= 10;
+			i_mat_b[(ROW_SIZE*0) + (DATA_LEN*6) +: DATA_LEN] <= 12;
+			i_mat_b[(ROW_SIZE*0) + (DATA_LEN*7) +: DATA_LEN] <= 14;
+
+			i_mat_b[(ROW_SIZE*1) + (DATA_LEN*0) +: DATA_LEN] <= 16;
+			i_mat_b[(ROW_SIZE*1) + (DATA_LEN*1) +: DATA_LEN] <= 18;
+			i_mat_b[(ROW_SIZE*1) + (DATA_LEN*2) +: DATA_LEN] <= 20;
+			i_mat_b[(ROW_SIZE*1) + (DATA_LEN*3) +: DATA_LEN] <= 22;
+			i_mat_b[(ROW_SIZE*1) + (DATA_LEN*4) +: DATA_LEN] <= 24;
+			i_mat_b[(ROW_SIZE*1) + (DATA_LEN*5) +: DATA_LEN] <= 26;
+			i_mat_b[(ROW_SIZE*1) + (DATA_LEN*6) +: DATA_LEN] <= 28;
+			i_mat_b[(ROW_SIZE*1) + (DATA_LEN*7) +: DATA_LEN] <= 30;
+
+			i_mat_b[(ROW_SIZE*2) + (DATA_LEN*0) +: DATA_LEN] <= 32;
+			i_mat_b[(ROW_SIZE*2) + (DATA_LEN*1) +: DATA_LEN] <= 34;
+			i_mat_b[(ROW_SIZE*2) + (DATA_LEN*2) +: DATA_LEN] <= 36;
+			i_mat_b[(ROW_SIZE*2) + (DATA_LEN*3) +: DATA_LEN] <= 38;
+			i_mat_b[(ROW_SIZE*2) + (DATA_LEN*4) +: DATA_LEN] <= 40;
+			i_mat_b[(ROW_SIZE*2) + (DATA_LEN*5) +: DATA_LEN] <= 42;
+			i_mat_b[(ROW_SIZE*2) + (DATA_LEN*6) +: DATA_LEN] <= 44;
+			i_mat_b[(ROW_SIZE*2) + (DATA_LEN*7) +: DATA_LEN] <= 46;
+
+			i_mat_b[(ROW_SIZE*3) + (DATA_LEN*0) +: DATA_LEN] <= 48;
+			i_mat_b[(ROW_SIZE*3) + (DATA_LEN*1) +: DATA_LEN] <= 50;
+			i_mat_b[(ROW_SIZE*3) + (DATA_LEN*2) +: DATA_LEN] <= 52;
+			i_mat_b[(ROW_SIZE*3) + (DATA_LEN*3) +: DATA_LEN] <= 54;
+			i_mat_b[(ROW_SIZE*3) + (DATA_LEN*4) +: DATA_LEN] <= 56;
+			i_mat_b[(ROW_SIZE*3) + (DATA_LEN*5) +: DATA_LEN] <= 58;
+			i_mat_b[(ROW_SIZE*3) + (DATA_LEN*6) +: DATA_LEN] <= 60;
+			i_mat_b[(ROW_SIZE*3) + (DATA_LEN*7) +: DATA_LEN] <= 62;
+
+			i_mat_b[(ROW_SIZE*4) + (DATA_LEN*0) +: DATA_LEN] <= 64;
+			i_mat_b[(ROW_SIZE*4) + (DATA_LEN*1) +: DATA_LEN] <= 66;
+			i_mat_b[(ROW_SIZE*4) + (DATA_LEN*2) +: DATA_LEN] <= 68;
+			i_mat_b[(ROW_SIZE*4) + (DATA_LEN*3) +: DATA_LEN] <= 70;
+			i_mat_b[(ROW_SIZE*4) + (DATA_LEN*4) +: DATA_LEN] <= 72;
+			i_mat_b[(ROW_SIZE*4) + (DATA_LEN*5) +: DATA_LEN] <= 74;
+			i_mat_b[(ROW_SIZE*4) + (DATA_LEN*6) +: DATA_LEN] <= 76;
+			i_mat_b[(ROW_SIZE*4) + (DATA_LEN*7) +: DATA_LEN] <= 78;
+
+			i_mat_b[(ROW_SIZE*5) + (DATA_LEN*0) +: DATA_LEN] <= 80;
+			i_mat_b[(ROW_SIZE*5) + (DATA_LEN*1) +: DATA_LEN] <= 82;
+			i_mat_b[(ROW_SIZE*5) + (DATA_LEN*2) +: DATA_LEN] <= 84;
+			i_mat_b[(ROW_SIZE*5) + (DATA_LEN*3) +: DATA_LEN] <= 86;
+			i_mat_b[(ROW_SIZE*5) + (DATA_LEN*4) +: DATA_LEN] <= 88;
+			i_mat_b[(ROW_SIZE*5) + (DATA_LEN*5) +: DATA_LEN] <= 90;
+			i_mat_b[(ROW_SIZE*5) + (DATA_LEN*6) +: DATA_LEN] <= 92;
+			i_mat_b[(ROW_SIZE*5) + (DATA_LEN*7) +: DATA_LEN] <= 94;
+
+			i_mat_b[(ROW_SIZE*6) + (DATA_LEN*0) +: DATA_LEN] <= 96;
+			i_mat_b[(ROW_SIZE*6) + (DATA_LEN*1) +: DATA_LEN] <= 98;
+			i_mat_b[(ROW_SIZE*6) + (DATA_LEN*2) +: DATA_LEN] <= 100;
+			i_mat_b[(ROW_SIZE*6) + (DATA_LEN*3) +: DATA_LEN] <= 102;
+			i_mat_b[(ROW_SIZE*6) + (DATA_LEN*4) +: DATA_LEN] <= 104;
+			i_mat_b[(ROW_SIZE*6) + (DATA_LEN*5) +: DATA_LEN] <= 106;
+			i_mat_b[(ROW_SIZE*6) + (DATA_LEN*6) +: DATA_LEN] <= 108;
+			i_mat_b[(ROW_SIZE*6) + (DATA_LEN*7) +: DATA_LEN] <= 110;
+
+			i_mat_b[(ROW_SIZE*7) + (DATA_LEN*0) +: DATA_LEN] <= 112;
+			i_mat_b[(ROW_SIZE*7) + (DATA_LEN*1) +: DATA_LEN] <= 114;
+			i_mat_b[(ROW_SIZE*7) + (DATA_LEN*2) +: DATA_LEN] <= 116;
+			i_mat_b[(ROW_SIZE*7) + (DATA_LEN*3) +: DATA_LEN] <= 118;
+			i_mat_b[(ROW_SIZE*7) + (DATA_LEN*4) +: DATA_LEN] <= 120;
+			i_mat_b[(ROW_SIZE*7) + (DATA_LEN*5) +: DATA_LEN] <= 122;
+			i_mat_b[(ROW_SIZE*7) + (DATA_LEN*6) +: DATA_LEN] <= 124;
+			i_mat_b[(ROW_SIZE*7) + (DATA_LEN*7) +: DATA_LEN] <= 126;
+																
+		end
+	end
 	
 endmodule

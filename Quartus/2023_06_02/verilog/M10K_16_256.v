@@ -4,12 +4,12 @@ module M10K_16_256#(
 	parameter N = 8,
 	parameter ADDRESS_SIZE = 4
 )( 
-	output reg [(DATA_LEN*N)-1:0]  o_read_data,
+	output reg [(DATA_LEN*N)-1:0] o_read_data,
 	input 	   [(DATA_LEN*N)-1:0] i_write_data,
-	input 						       i_clk,
-   input 	   [ADDRESS_SIZE-1:0] i_read_address, 
+	input 						  i_clk,
+    input 	   [ADDRESS_SIZE-1:0] i_read_address, 
 	input 	   [ADDRESS_SIZE-1:0] i_write_address,
-	input 						       i_wr_en
+	input 						  i_wr_en
 );
 	 // force M10K ram style
 	 // 256 words of 32 bits

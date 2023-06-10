@@ -1,0 +1,77 @@
+C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/mat_outer.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/mat_outer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mat_outer
+
+Top level modules:
+	mat_outer
+
+} {} {}} C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/M10K_read_buffer.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/M10K_read_buffer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module M10K_read_buffer
+
+Top level modules:
+	M10K_read_buffer
+
+} {} {}} C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/mat_ops_controller.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/mat_ops_controller.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mat_ops_controller
+
+Top level modules:
+	mat_ops_controller
+
+} {} {}} C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/mat_add.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/mat_add.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mat_add
+
+Top level modules:
+	mat_add
+
+} {} {}} C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/mat_accum.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/mat_accum.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mat_accum
+
+Top level modules:
+	mat_accum
+
+} {} {}} C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/mat_mul.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/mat_mul.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mat_mul
+
+Top level modules:
+	mat_mul
+
+} {} {}} C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v {2 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_mat_ops_controller
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(54): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(55): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(57): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(58): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(62): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(63): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(65): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(66): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(68): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(69): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(71): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(72): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(74): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(75): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(77): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(78): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(80): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(81): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(83): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/tb_mat_ops_controller.v(84): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	tb_mat_ops_controller
+
+} {} {}} C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/M10K_write.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/20.1/Project/ModelSim/2023_06_10/M10K_write.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module M10K_write
+
+Top level modules:
+	M10K_write
+
+} {} {}}

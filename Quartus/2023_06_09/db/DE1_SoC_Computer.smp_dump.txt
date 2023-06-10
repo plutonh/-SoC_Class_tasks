@@ -1,0 +1,72 @@
+
+State Machine - |DE1_SoC_Computer|mat_ops_controller:u0|state
+Name state.START state.DONE state.OPS state.POLLING 
+state.POLLING 0 0 0 0 
+state.OPS 0 0 1 1 
+state.DONE 0 1 0 1 
+state.START 1 0 0 1 
+
+State Machine - |DE1_SoC_Computer|mat_ops_controller:u0|mat_ops:u0|state
+Name state.READ state.DONE state.WRITE state.MAT_MUL state.IDLE 
+state.IDLE 0 0 0 0 0 
+state.MAT_MUL 0 0 0 1 1 
+state.WRITE 0 0 1 0 1 
+state.DONE 0 1 0 0 1 
+state.READ 1 0 0 0 1 
+
+State Machine - |DE1_SoC_Computer|mat_ops_controller:u0|mat_ops:u0|mat_mul:m0|state
+Name state.VEC0 state.ACCUM_AND_DONE state.MUL_STORE_VEC7 state.COPY_VEC7 state.VEC7 state.VEC6 state.VEC5 state.VEC4 state.VEC3 state.VEC2 state.VEC1 state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+state.VEC1 0 0 0 0 0 0 0 0 0 0 1 1 
+state.VEC2 0 0 0 0 0 0 0 0 0 1 0 1 
+state.VEC3 0 0 0 0 0 0 0 0 1 0 0 1 
+state.VEC4 0 0 0 0 0 0 0 1 0 0 0 1 
+state.VEC5 0 0 0 0 0 0 1 0 0 0 0 1 
+state.VEC6 0 0 0 0 0 1 0 0 0 0 0 1 
+state.VEC7 0 0 0 0 1 0 0 0 0 0 0 1 
+state.COPY_VEC7 0 0 0 1 0 0 0 0 0 0 0 1 
+state.MUL_STORE_VEC7 0 0 1 0 0 0 0 0 0 0 0 1 
+state.ACCUM_AND_DONE 0 1 0 0 0 0 0 0 0 0 0 1 
+state.VEC0 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE1_SoC_Computer|mat_ops_controller:u0|mat_ops:u0|M10K_read_buffer:r1|state
+Name state.READ0 state.DONE state.WAIT state.READ7 state.READ6 state.READ5 state.READ4 state.READ3 state.READ2 state.READ1 state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 
+state.READ1 0 0 0 0 0 0 0 0 0 1 1 
+state.READ2 0 0 0 0 0 0 0 0 1 0 1 
+state.READ3 0 0 0 0 0 0 0 1 0 0 1 
+state.READ4 0 0 0 0 0 0 1 0 0 0 1 
+state.READ5 0 0 0 0 0 1 0 0 0 0 1 
+state.READ6 0 0 0 0 1 0 0 0 0 0 1 
+state.READ7 0 0 0 1 0 0 0 0 0 0 1 
+state.WAIT 0 0 1 0 0 0 0 0 0 0 1 
+state.DONE 0 1 0 0 0 0 0 0 0 0 1 
+state.READ0 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE1_SoC_Computer|mat_ops_controller:u0|mat_ops:u0|M10K_read_buffer:r0|state
+Name state.READ0 state.DONE state.WAIT state.READ7 state.READ6 state.READ5 state.READ4 state.READ3 state.READ2 state.READ1 state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 
+state.READ1 0 0 0 0 0 0 0 0 0 1 1 
+state.READ2 0 0 0 0 0 0 0 0 1 0 1 
+state.READ3 0 0 0 0 0 0 0 1 0 0 1 
+state.READ4 0 0 0 0 0 0 1 0 0 0 1 
+state.READ5 0 0 0 0 0 1 0 0 0 0 1 
+state.READ6 0 0 0 0 1 0 0 0 0 0 1 
+state.READ7 0 0 0 1 0 0 0 0 0 0 1 
+state.WAIT 0 0 1 0 0 0 0 0 0 0 1 
+state.DONE 0 1 0 0 0 0 0 0 0 0 1 
+state.READ0 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE1_SoC_Computer|Computer_System:The_System|Computer_System_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:onchip_sram1_s2_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SoC_Computer|Computer_System:The_System|Computer_System_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:onchip_sram0_s2_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
